@@ -410,12 +410,12 @@
 Your selected perfSONAR Toolkit is: <b><?php echo $_GET["toolkits"]; ?></b>
 </nav>
 
-<div class="flex-container" style="min-height: 220px;">
+<div class="flex-container" style="min-height: 200px;">
  <div>
 <iframe id="ifr" name="ifr" style="float:right" src="https://psetf.opensciencegrid.org/etf/check_mk/view.py?filled_in=filter&host_regex=<?php echo $_GET["toolkits"]; ?>&selection=ff14182e-35bd-412e-a95a-526b80959b00&view_name=searchhost" height="220" width="500"></iframe><br>
  </div>
 
- <div style="min-height: 220px;">
+ <div style="min-height: 200px;">
 <h2>Customized Web links for <?php echo $_GET["toolkits"]; ?></h2>
 This toolkit's web page: 
 <a href="https://<?php echo $_GET["toolkits"]; ?>/toolkit">https://<?php echo $_GET["toolkits"]; ?>/toolkit</a> <br>
@@ -432,7 +432,7 @@ This toolkit's settings and status  <a href="https://<?php echo $_GET["toolkits"
         <a href="https://www.nsf.gov/"><img src="img/nsf_round_logo.png" alt="The NSF logo" width="95" height="95"></a>
   </footer>
   <center>
-        <a style="padding: 30px 10px;" href="mailto:wlcg-perfsonar-support@cern.ch?subject=ToolkitInfoFeedback">Contact about the webpage</a>
+        <a style="padding: 10px 0px;" href="mailto:wlcg-perfsonar-support@cern.ch?subject=ToolkitInfoFeedback">Contact us about this webpage</a>
   </center>
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
