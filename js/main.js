@@ -9,6 +9,12 @@ function pSPipelineFunc() {
 function ToolkitDropFunc() {
   document.getElementById("ToolkitDrop").classList.toggle("show");
 }
+function pSDocsFunc() {
+  document.getElementById("pSDocs").classList.toggle("show");
+}
+function pSServicesFunc() {
+  document.getElementById("pSServices").classList.toggle("show");
+}
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(e) {
@@ -24,6 +30,14 @@ window.onclick = function(e) {
     var ToolkitDrop = document.getElementById("ToolkitDrop");
     if (ToolkitDrop.classList.contains('show')) {
         ToolkitDrop.classList.remove('show');
+    }
+    var pSDocs = document.getElementById("pSDocs");
+    if (pSDocs.classList.contains('show')) {
+        pSDocs.classList.remove('show');
+    }
+    var pSServices = document.getElementById("pSServices");
+    if (pSServices.classList.contains('show')) {
+        pSServices.classList.remove('show');
     }
   }
 }

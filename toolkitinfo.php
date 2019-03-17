@@ -384,6 +384,28 @@
     <a href="http://atlas-kibana.mwt2.org:5601/app/kibana#/visualize/edit/Perfsonar-alarms-bad-packet-loss-destinations?_g=(refreshInterval:(pause:!t,value:0),time:(from:now-30d,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(language:lucene,query:(query_string:(analyze_wildcard:!t,lowercase_expanded_terms:!f,query:'*'))),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(customInterval:'2h',drop_partials:!f,extended_bounds:(),field:alarmTime,interval:auto,min_doc_count:1,time_zone:UCT,useNormalizedEsInterval:!t),schema:segment,type:date_histogram),(enabled:!t,id:'3',params:(field:destSite,missingBucket:!f,missingBucketLabel:Missing,order:desc,orderBy:'1',otherBucket:!f,otherBucketLabel:Other,size:20),schema:group,type:terms)),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(),type:category)),defaultYExtents:!f,grid:(categoryLines:!f,style:(color:%23eee)),legendPosition:right,mode:stacked,scale:linear,seriesParams:!((data:(id:'1',label:Count),mode:stacked,show:true,type:histogram,valueAxis:ValueAxis-1)),setYExtents:!f,shareYAxis:!t,times:!(),type:histogram,valueAxes:!((id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(defaultYExtents:!f,mode:normal,setYExtents:!f,type:linear),show:!t,style:(),title:(text:Count),type:value)),yAxis:()),title:'Perfsonar%20alarms%20-%20bad%20packet%20loss%20-%20destinations',type:histogram))">Packet Loss BarGraph by Dest</a>
   </div>
   </div> 
+
+  <div class="dropdown">
+  <button class="dropbtn" onclick="pSDocsFunc()">Documentation 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="pSDocs">
+      <a href="https://opensciencegrid.org/networking/">OSG Networking Area Documentation</a>
+      <a href="https://docs.perfsonar.net/">perfSONAR Toolkit Documentation</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+  <button class="dropbtn" onclick="pSServicesFunc()">OSG Network Services 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="pSServices">
+      <a href="https://psmad.opensciencegrid.org/maddash-webui/index.cgi">OSG//WLCG MaDDash</a>   
+      <a href="https://psconfig.opensciencegrid.org/">OSG/WLCG pSConfig (PWA)</a>
+    </div>
+  </div>
+
+
 </div>
 Your selected perfSONAR Toolkit is: <b><?php echo $_GET["toolkits"]; ?></b>
 </nav>
@@ -401,15 +423,6 @@ The testing configuration instructions for this toolkit (JSON) <a href="http://p
 This toolkit's settings and status  <a href="https://<?php echo $_GET["toolkits"]; ?>/toolkit/services/host.cgi?method=get_summary">Details</a><br>
 </section>
 
-<div class="clearfix">
- <div class="box" style="border: solid black 2px;border-style:groove;border-radius:4px;background-color:#ddF">
-<h3>WLCG/OSG perfSONAR Links</h3> 
-The OSG Networking Area <a href="https://opensciencegrid.org/networking/">Documentation</a><br>
-The perfSONAR Toolkit <a href="https://docs.perfsonar.net/">Documentation</a> page <br>
-The OSG <a href="https://psmad.opensciencegrid.org/maddash-webui/index.cgi">MaDDash</a> page <br>
-The OSG <a href="https://psconfig.opensciencegrid.org/">pSConfig</a> (PWA) page <br>
-</div>
-</div>
 
   <footer>
         <a href="https://opensciencegrid.org/"><img src="img/osg_logo-600x380.png" alt="The OSG logo" width="150" height="95"></a>
