@@ -46,7 +46,7 @@
 <nav>
 <div class="navbar">
     <div class="dropdown">
-    <form action="/pS-URLs.php" method="get">
+    <form action="/toolkitinfo/toolkitinfo.php" method="get">
              <label for="toolkits" style="color:white">Select toolkit: <input list="toolkits" name="toolkits" type="text">
              </label><input type="submit" value="Submit">
         <datalist id = "toolkits">
