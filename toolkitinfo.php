@@ -428,12 +428,10 @@ This toolkit's settings and status  <a href="https://<?php echo $_GET["toolkits"
 </div>
 
   <footer>
-        <center>
         <a href="https://iris-hep.org/"><img src="img/Iris-hep-6-WHITE-complete.png" alt="The IRIS-HEP logo" width="200" height="80"></a>
         <a href="https://www.nsf.gov/"><img src="img/nsf_round_logo.png" alt="The NSF logo" width="95" height="95"></a>
- 	</center>
-        <a style="float: center;padding: 30px 10px;" href="mailto:wlcg-perfsonar-support@cern.ch?subject=ToolkitInfoFeedback">Contact about the webpage</a>
   </footer>
+        <a style="float: center;padding: 30px 10px;" href="mailto:wlcg-perfsonar-support@cern.ch?subject=ToolkitInfoFeedback">Contact about the webpage</a>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
