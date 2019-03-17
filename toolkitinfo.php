@@ -427,10 +427,9 @@ This toolkit's settings and status  <a href="https://<?php echo $_GET["toolkits"
 </div>
 
   <footer>
-/*        <a href="https://opensciencegrid.org/"><img src="img/osg_logo-600x380.png" alt="The OSG logo" width="150" height="95"></a> */
+        <a href="mailto:wlcg-perfsonar-support@cern.ch?subject=ToolkitInfoFeedback">Contact about the webpage</a>
         <a href="https://iris-hep.org/"><img src="img/Iris-hep-6-WHITE-complete.png" alt="The IRIS-HEP logo" width="200" height="80"></a> </center>
         <a href="https://www.nsf.gov/"><img src="img/nsf_round_logo.png" alt="The NSF logo" width="95" height="95"></a>
-/*        <a href="http://wlcg.web.cern.ch/"><img src="img/WLCG-blackback-Logo-590x480.jpg" alt="The WLCG logo" width="150" height="95"></a> */
   </footer>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
