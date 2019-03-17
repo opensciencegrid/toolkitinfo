@@ -410,7 +410,7 @@
 Your selected perfSONAR Toolkit is: <b><?php echo $_GET["toolkits"]; ?></b>
 </nav>
 
-<div class="clearfix" style="min-height=200px;">
+<div class="flex-container" style="min-height=200px;">
  <div>
 <h2>Customized Web links for <?php echo $_GET["toolkits"]; ?></h2>
 This toolkit's web page: 
@@ -427,7 +427,7 @@ This toolkit's settings and status  <a href="https://<?php echo $_GET["toolkits"
 </div>
 
   <footer>
-        <a href="mailto:wlcg-perfsonar-support@cern.ch?subject=ToolkitInfoFeedback">Contact about the webpage</a>
+        <a style="float: left;" href="mailto:wlcg-perfsonar-support@cern.ch?subject=ToolkitInfoFeedback">Contact about the webpage</a>
         <a href="https://iris-hep.org/"><img src="img/Iris-hep-6-WHITE-complete.png" alt="The IRIS-HEP logo" width="200" height="80"></a> </center>
         <a href="https://www.nsf.gov/"><img src="img/nsf_round_logo.png" alt="The NSF logo" width="95" height="95"></a>
   </footer>
