@@ -224,6 +224,19 @@ nav {
   display: block;
 }
 
+div.form
+{
+    display: block;
+    text-align: left;
+}
+
+form {
+    display: inline-block;
+    margin-left: 15px;
+    width: 33%;
+    text-align: left;
+    padding: 10px 0;
+}
 
 
 

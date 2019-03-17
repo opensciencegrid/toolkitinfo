@@ -45,7 +45,7 @@
 
 <nav>
 <div class="navbar">
-    <div class="dropdown">
+    <div class="form">
     <form action="/toolkitinfo/toolkitinfo.php" method="get">
              <label for="toolkits" style="color:white">Select toolkit: <input list="toolkits" name="toolkits" type="text">
              </label><input type="submit" value="Submit">
