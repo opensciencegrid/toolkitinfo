@@ -415,8 +415,8 @@ Your selected perfSONAR Toolkit is: <b><?php echo $_GET["toolkits"]; ?></b>
 <iframe id="ifr" name="ifr" style="float:right" src="https://psetf.opensciencegrid.org/etf/check_mk/view.py?filled_in=filter&host_regex=<?php echo $_GET["toolkits"]; ?>&selection=ff14182e-35bd-412e-a95a-526b80959b00&view_name=searchhost" height="220" width="500"></iframe><br>
  </div>
 
- <div style="min-height: 200px;">
-<h2>Customized Web links for <?php echo $_GET["toolkits"]; ?></h2>
+ <div style="min-height: 200px;margin: 10px">
+Customized Web links for <?php echo $_GET["toolkits"]; ?>
 This toolkit's web page: 
 <a href="https://<?php echo $_GET["toolkits"]; ?>/toolkit">https://<?php echo $_GET["toolkits"]; ?>/toolkit</a> <br>
 Monitoring of the toolkit's services and configuration: 
