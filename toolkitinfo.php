@@ -47,8 +47,8 @@
 <div class="navbar">
     <div class="form">
     <form action="/toolkitinfo/toolkitinfo.php" method="get">
-             <label for="toolkits" style="color:white">Select toolkit: <input list="toolkits" name="toolkits" type="text">
-             </label><input type="submit" value="Submit">
+             <label for="toolkits" style="color:white">Select toolkit: <input list="toolkits" name="toolkits" type="text"></label><input type="submit" value="Submit">
+
         <datalist id = "toolkits">
         <option value = ></option>
         <option value = alice14.spbu.ru>alice14.spbu.ru</option>
@@ -415,14 +415,14 @@ Your selected perfSONAR Toolkit is: <b><?php echo $_GET["toolkits"]; ?></b>
 <iframe id="ifr" name="ifr" style="float:right" src="https://psetf.opensciencegrid.org/etf/check_mk/view.py?filled_in=filter&host_regex=<?php echo $_GET["toolkits"]; ?>&selection=ff14182e-35bd-412e-a95a-526b80959b00&view_name=searchhost" height="220" width="500"></iframe><br>
  </div>
 
- <div style="min-height: 200px;margin: 10px">
-Customized Web links for <?php echo $_GET["toolkits"]; ?>
-This toolkit's web page: 
-<a href="https://<?php echo $_GET["toolkits"]; ?>/toolkit">https://<?php echo $_GET["toolkits"]; ?>/toolkit</a> <br>
-Monitoring of the toolkit's services and configuration: 
-<a href="https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Fhost%3D<?php echo $_GET["toolkits"]; ?>%26site%3Detf%26view_name%3Dhost">psetf Monitoring for <?php echo $_GET["toolkits"]; ?></a><br>
-The testing configuration instructions for this toolkit (JSON) <a href="http://psconfig.opensciencegrid.org/pub/auto/<?php echo $_GET["toolkits"]; ?>">JSON Configuration</a><br>
-This toolkit's settings and status  <a href="https://<?php echo $_GET["toolkits"]; ?>/toolkit/services/host.cgi?method=get_summary">Details</a><br>
+ <div style="min-height: 200px;left-margin: 10px">
+Customized Web links for <b><?php echo $_GET["toolkits"]; ?><b><br>
+
+<a href="https://<?php echo $_GET["toolkits"]; ?>/toolkit">This toolkit's web interface</a><br>
+<a href="https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Fhost%3D<?php echo $_GET["toolkits"]; ?>%26site%3Detf%26view_name%3Dhost">Monitoring of this toolkit's services/configuration</a><br>
+<a href="http://psconfig.opensciencegrid.org/pub/auto/<?php echo $_GET["toolkits"]; ?>">Testing insructions for this toolkit (JSON)</a><br>
+<a href="https://<?php echo $_GET["toolkits"]; ?>/toolkit/services/host.cgi?method=get_summary">This toolkit's settings and status</a><br>
+
  </div>
 
 </div>
