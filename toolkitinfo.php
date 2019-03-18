@@ -366,10 +366,23 @@
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-content" id="pSPipeline">
-    <a href="https://gracc.opensciencegrid.org/dashboard/db/perfsonar-collector?orgId=1" target="_blank">perfSONAR Collector Monitoring</a>
-    <a href="http://atlas-kibana.mwt2.org:5601/app/kibana#/visualize/edit/58bf3e80-18d1-11e8-8f2f-ab6704660c79?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-7d,interval:auto,mode:quick,timezone:UTC,to:now))&_a=(filters:!(),linked:!f,query:(language:lucene,query:(match_all:())),uiState:(),vis:(aggs:!(),params:(expression:'.es(index%3D!'ps_owd!',%20q%3D!'*!').label(!'OWD!'),%20.es(index%3D!'ps_throughput!',%20q%3D!'*!').label(!'throughput!').yaxis(2),%20.es(index%3D!'ps_meta!',%20q%3D!'*!').label(!'metadata!').yaxis(2),%20.es(index%3D!'ps_status!',%20q%3D!'*!').label(!'status!').yaxis(2),%20.es(index%3D!'ps_trace!',%20q%3D!'*!').label(!'traceroute!'),%20.es(index%3D!'ps_packet_loss!',%20q%3D!'*!').label(!'packet%20loss!'),%0A.es(index%3D!'ps_retransmits!',%20q%3D!'*!').label(!'retransmits!').yaxis(2)',interval:auto,type:timelion),title:'PerfSONAR%20ingest',type:timelion))" target="_blank">perfSONAR Ingest Rate</a>
-    <a href="https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Faggr_group%3DOSG%2520Network%2520ITB%2520Servers%26view_name%3Daggr_group" target="_blank">Status of ITB Services</a>
-    <a href="https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Faggr_group%3DOSG%2520Production%2520Network%2520Services%26view_name%3Daggr_group" target="_blank">Status of Production Services</a>
+    <div class="tooltip">
+    <div class="tooltip">
+        <span class="tooltiptext">This is the GRACC(OSG) Grafana dashboard showing the status of the data collector responsible for gathering data from perfSONAR toolkits"</span>
+        <a href="https://gracc.opensciencegrid.org/dashboard/db/perfsonar-collector?orgId=1" target="_blank">perfSONAR Collector Monitoring</a>
+    </div>
+    <div class="tooltip">
+        <span class="tooltiptext">This is the Kibana interface to the University of Chicago ATLAS Analytics platform which hosts our network metrics (as well as lots of other analytics data)"</span>
+        <a href="http://atlas-kibana.mwt2.org:5601/app/kibana#/visualize/edit/58bf3e80-18d1-11e8-8f2f-ab6704660c79?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-7d,interval:auto,mode:quick,timezone:UTC,to:now))&_a=(filters:!(),linked:!f,query:(language:lucene,query:(match_all:())),uiState:(),vis:(aggs:!(),params:(expression:'.es(index%3D!'ps_owd!',%20q%3D!'*!').label(!'OWD!'),%20.es(index%3D!'ps_throughput!',%20q%3D!'*!').label(!'throughput!').yaxis(2),%20.es(index%3D!'ps_meta!',%20q%3D!'*!').label(!'metadata!').yaxis(2),%20.es(index%3D!'ps_status!',%20q%3D!'*!').label(!'status!').yaxis(2),%20.es(index%3D!'ps_trace!',%20q%3D!'*!').label(!'traceroute!'),%20.es(index%3D!'ps_packet_loss!',%20q%3D!'*!').label(!'packet%20loss!'),%0A.es(index%3D!'ps_retransmits!',%20q%3D!'*!').label(!'retransmits!').yaxis(2)',interval:auto,type:timelion),title:'PerfSONAR%20ingest',type:timelion))" target="_blank">perfSONAR Ingest Rate</a>
+    </div>
+    <div class="tooltip">
+        <span class="tooltiptext">This is the OSG/WLCG perfSONAR Infrastructure Test Bed (ITB) service monitoring host, based upon the Experiments Testing Framework (ETF) and Check_MK"</span>
+        <a href="https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Faggr_group%3DOSG%2520Network%2520ITB%2520Servers%26view_name%3Daggr_group" target="_blank">Status of ITB Services</a>
+    </div>
+    <div class="tooltip">
+        <span class="tooltiptext">This is the OSG/WLCG perfSONAR Production service monitoring host, based upon the Experiments Testing Framework (ETF) and Check_MK"</span>
+        <a href="https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Faggr_group%3DOSG%2520Production%2520Network%2520Services%26view_name%3Daggr_group" target="_blank">Status of Production Services</a>
+    </div>
   </div>
   </div> 
 
