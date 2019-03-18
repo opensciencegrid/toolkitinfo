@@ -409,7 +409,7 @@
   <button class="dropbtn" onclick="pSAnalyticsFunc()">Analytics and Dashboards
     <i class="fa fa-caret-down"></i>
   </button>
-  <div class="dropdown-content" id="pSServices">
+  <div class="dropdown-content" id="pSAnalytics">
       <a href="http://monit-grafana-open.cern.ch/dashboard/db/home?orgId=16">WLCG Grafana Network Dashboards</a>   
       <a href="http://atlas-kibana.mwt2.org:5601/app/kibana#/dashboard/Default?_g=()">OSG Analytics Platform</a>
     </div>
