@@ -398,8 +398,8 @@
   </div> 
 
   <div class="dropdown">
-  <button class="dropbtn" onclick="pSDocsFunc()">
-    <i class="fa fa-caret-down">Documentation</i>
+  <button class="dropbtn" onclick="pSDocsFunc()">Documentation
+    <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-content" id="pSDocs">
       <a href="https://opensciencegrid.org/networking/" target="_blank">OSG Networking Area Documentation</a>

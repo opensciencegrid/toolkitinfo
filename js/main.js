@@ -6,9 +6,6 @@ function pSAlarmsFunc() {
 function pSPipelineFunc() {
   document.getElementById("pSPipeline").classList.toggle("show");
 }
-function ToolkitDropFunc() {
-  document.getElementById("ToolkitDrop").classList.toggle("show");
-}
 function pSDocsFunc() {
   document.getElementById("pSDocs").classList.toggle("show");
 }
@@ -29,10 +26,6 @@ window.onclick = function(e) {
     var pSPipeline = document.getElementById("pSPipeline");
     if (pSPipeline.classList.contains('show')) {
         pSPipeline.classList.remove('show');
-    }
-    var ToolkitDrop = document.getElementById("ToolkitDrop");
-    if (ToolkitDrop.classList.contains('show')) {
-        ToolkitDrop.classList.remove('show');
     }
     var pSDocs = document.getElementById("pSDocs");
     if (pSDocs.classList.contains('show')) {
