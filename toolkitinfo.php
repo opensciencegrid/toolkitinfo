@@ -443,19 +443,19 @@ Customized Web links for <b><?php echo $_GET["toolkits"]; ?><b><br>
     <div class="tooltip">
         <span class="tooltiptext">This is perfSONAR toolkit web interface, part of the default install of perfSONAR</span>
 	<a href="https://<?php echo $_GET["toolkits"]; ?>/toolkit" target="_blank">This toolkit's web interface</a><br>
-    </div>
+    </div><br>
     <div class="tooltip">
         <span class="tooltiptext">This is Check_MK-based service monitoring from the Experiments Testing Framework (ETF).  Ideally all tests show "Green".  If not, clicking on specificy tests can provide further details.</span>
         <a href="https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Fhost%3D<?php echo $_GET["toolkits"]; ?>%26site%3Detf%26view_name%3Dhost" target="_blank">Monitoring of this toolkit's services/configuration</a><br>
-    </div>
+    </div><br>
     <div class="tooltip">
         <span class="tooltiptext">We use pSConfig and PWA (pSConfig Web Administrator) to manage our testing configuration for OSG/WLCG.  Clicking here will return the JSON configuration details being provided to this Toolkit host.</span>
         <a href="http://psconfig.opensciencegrid.org/pub/auto/<?php echo $_GET["toolkits"]; ?>" target="_blank">Testing insructions for this toolkit (JSON)</a><br>
-    </div>
+    </div><br>
     <div class="tooltip">
         <span class="tooltiptext">This link will provide configuration and operational details in JSON format for this specific perfSONAR Toolkit instance.  We recommend installing a JSON parser ("JSON View" or others) in your browser.</span>
         <a href="https://<?php echo $_GET["toolkits"]; ?>/toolkit/services/host.cgi?method=get_summary" target="_blank">This toolkit's settings and status</a><br>
-    </div>
+    </div><br>
 
 
  </div>
