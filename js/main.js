@@ -15,6 +15,9 @@ function pSDocsFunc() {
 function pSServicesFunc() {
   document.getElementById("pSServices").classList.toggle("show");
 }
+function pSAnalyticsFunc() {
+  document.getElementById("pSAnalytics").classList.toggle("show");
+}
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(e) {
@@ -38,6 +41,10 @@ window.onclick = function(e) {
     var pSServices = document.getElementById("pSServices");
     if (pSServices.classList.contains('show')) {
         pSServices.classList.remove('show');
+    }
+    var pSAnalytics = document.getElementById("pSAnalytics");
+    if (pSAnalytics.classList.contains('show')) {
+        pSAnalytics.classList.remove('show');
     }
   }
 }
