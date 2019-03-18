@@ -367,7 +367,6 @@
   </button>
   <div class="dropdown-content" id="pSPipeline">
     <div class="tooltip">
-    <div class="tooltip">
         <span class="tooltiptext">This is the GRACC(OSG) Grafana dashboard showing the status of the data collector responsible for gathering data from perfSONAR toolkits"</span>
         <a href="https://gracc.opensciencegrid.org/dashboard/db/perfsonar-collector?orgId=1" target="_blank">perfSONAR Collector Monitoring</a>
     </div>
