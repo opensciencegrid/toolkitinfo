@@ -37,7 +37,7 @@
 
 <title>OSG/WLCG perfSONAR Toolkit Info Page</title>
 <header>
-<a href="https://opensciencegrid.org/"><img style="float:left" src="img/osg_logo-600x380.png" alt="The OSG logo" width="150" height="95"></a>
+<a href="https://opensciencegrid.org/"><img style="float:left" src="img/osg_logo-600x380.png" alt="The OSG logo" width="150" height="95" onload="setview()"></a>
 <a href="http://wlcg.web.cern.ch/"><img style="float:right" align="top" src="img/WLCG-blackback-Logo-590x480.jpg" alt="The WLCG logo" width="150" height="95"></a>
 <H2>The perfSONAR Toolkit Information Page</H2>
 </header>
@@ -389,10 +389,17 @@
       <i class="fa fa-caret-down"></i>
      </button>
      <div class="dropdown-content" id="pSPipeline">
+<<<<<<< HEAD
 <!--      <div class="tooltip" id="pS-collector">
         <span class="tooltiptext">This is the GRACC(OSG) Grafana dashboard showing the status of the data collector responsible for gathering data from perfSONAR toolkits"</span>
         <a href="https://gracc.opensciencegrid.org/dashboard/db/perfsonar-collector?orgId=1" target="_blank">perfSONAR Collector Monitoring</a>
       </div><br> -->
+=======
+      <div class="tooltip" id="pS-collector">
+        <span class="tooltiptext">This is the GRACC(OSG) Grafana dashboard showing the status of the data collector responsible for gathering data from perfSONAR toolkits"</span>
+        <a href="https://gracc.opensciencegrid.org/dashboard/db/perfsonar-collector?orgId=1" target="_blank">perfSONAR Collector Monitoring</a>
+      </div><br>
+>>>>>>> 0dca390be044697ae3fcc765d09a37d73d55b4fd
       <div class="tooltip" id="Ingest">
         <span class="tooltiptext">This is the Kibana interface to the University of Chicago ATLAS Analytics platform which hosts our network metrics (as well as lots of other analytics data)"</span>
         <a href="https://atlas-kibana.mwt2.org/s/networking/app/kibana#/visualize/edit/58bf3e80-18d1-11e8-8f2f-ab6704660c79?_g=(refreshInterval:(pause:!t,value:0),time:(from:now-7d,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(language:lucene,query:(match_all:())),uiState:(),vis:(aggs:!(),params:(expression:'.es(index%3D!'ps_owd!',%20q%3D!'*!').label(!'OWD!'),%0A.es(index%3D!'ps_throughput!',%20q%3D!'*!').label(!'throughput!').yaxis(2),%0A.es(index%3D!'ps_meta!',%20q%3D!'*!').label(!'metadata!').yaxis(2),%0A.es(index%3D!'ps_status!',%20q%3D!'*!').label(!'status!').yaxis(2),%0A.es(index%3D!'ps_trace!',%20q%3D!'*!').label(!'traceroute!'),%0A.es(index%3D!'ps_packet_loss!',%20q%3D!'*!').label(!'packet%20loss!'),%0A.es(index%3D!'ps_retransmits!',%20q%3D!'*!').label(!'retransmits!').yaxis(2)',interval:auto,type:timelion),title:'PerfSONAR%20ingest',type:timelion))" target="_blank">perfSONAR Ingest Rate</a>
@@ -483,10 +490,17 @@ Your selected perfSONAR Toolkit is: <b><?php echo $_GET["toolkits"]; ?></b>
 
 <div class="flex-container" style="min-height: 220px;">
  <div>
+<<<<<<< HEAD
    <iframe id="ifr-psetf" name="ifr-psetf" style="display: none;float:right" src="https://psetf.opensciencegrid.org/etf/check_mk/view.py?filled_in=filter&host_regex=<?php echo $_GET["toolkits"]; ?>&selection=ff14182e-35bd-412e-a95a-526b80959b00&view_name=searchhost" height="220" width="500"></iframe><br>
  </div>
  <div>
    <textarea id="ifr-nox509" style="display: inline;min-height: 80px;min-width: 410px; float:right;margin-left: 10px;vertical-align: middle" rows=3>
+=======
+   <iframe id="ifr-psetf" name="ifr-psetf" style="float:right" src="https://psetf.opensciencegrid.org/etf/check_mk/view.py?filled_in=filter&host_regex=<?php echo $_GET["toolkits"]; ?>&selection=ff14182e-35bd-412e-a95a-526b80959b00&view_name=searchhost" height="220" width="500"></iframe><br>
+ </div>
+ <div>
+   <textarea id="ifr-nox509" visibility="hidden" style="min-height: 80px;min-width: 410px; float:right;margin-left: 10px;vertical-align: middle" rows=3>
+>>>>>>> 0dca390be044697ae3fcc765d09a37d73d55b4fd
 	You don't seem to have an x.509 credential.
 	Some items are not accessible without such a credential 
         and are removed from this page and its menus.
@@ -519,8 +533,13 @@ Web links for <b><?php echo $_GET["toolkits"]; ?><b><br>
 
 
  </div>
+<<<<<<< HEAD
  <div id="no-custom-links">
    <textarea id="no-cust-text" style="vertical-align: middle;min-height: 80px;min-width: 400px">
+=======
+ <div id="no-custom-links" style="margin-left: 10px;vertical-align: top;display: none">
+   <textarea id="no-cust-text" style="vertical-align: middle">
+>>>>>>> 0dca390be044697ae3fcc765d09a37d73d55b4fd
 	You have not selected a toolkit for customized links.
 	Please use the above "Select toolkit" drop-down
         to pick a specific toolkit.
@@ -539,12 +558,20 @@ Web links for <b><?php echo $_GET["toolkits"]; ?><b><br>
 
 <!-- We want a function that will change visibility of page items based on if we have x.509 credentials or not -->
 <script>
+<<<<<<< HEAD
    <!-- Implement visibility of elements based upon x.509 presence -->
      if (location.protocol !== 'https:' ) {
        <!-- This is the case if we DO NOT have x.509 credentials -->
        document.getElementById("ifr-psetf").style.display="none";
        document.getElementById("ifr-nox509").style.display="inline";
        <!-- document.getElementById("pS-collector").style.visibility="hidden"; -->
+=======
+   function setview() {
+   <!-- Implement visibility of elements based upon x.509 presence -->
+     if (location.protocol !== 'https:' ) {
+       <!-- This is the case if we DO NOT have x.509 credentials -->
+       document.getElementById("pS-collector").style.visibility="hidden";
+>>>>>>> 0dca390be044697ae3fcc765d09a37d73d55b4fd
        document.getElementById("Ingest").style.visibility="visible";
        document.getElementById("ITB-mon").style.visibility="hidden";
        document.getElementById("Prod-mon").style.visibility="hidden";
@@ -563,11 +590,21 @@ Web links for <b><?php echo $_GET["toolkits"]; ?><b><br>
        document.getElementById("pS-infrastructure").style.visibility="visible";
        document.getElementById("SAND").style.visibility="visible";
        document.getElementById("MEPHI-tr").style.visibility="visible";
+<<<<<<< HEAD
      } else {
        <!-- This is the case if we DO have x.509 credentials -->
        document.getElementById("ifr-psetf").style.display="inline";
        document.getElementById("ifr-nox509").style.display="none";
        <!-- document.getElementById("pS-collector").style.visibility="visible"; -->
+=======
+       document.getElementById("ifr-psetf").style.visibility="hidden";
+       document.getElementById("ifr-psetf").style.width=0;
+       document.getElementById("ifr-psetf").style.height=0;
+       document.getElementById("ifr-nox509").style.visibility="visible";
+     } else {
+       <!-- This is the case if we DO have x.509 credentials -->
+       document.getElementById("pS-collector").style.visibility="visible";
+>>>>>>> 0dca390be044697ae3fcc765d09a37d73d55b4fd
        document.getElementById("Ingest").style.visibility="visible";
        document.getElementById("ITB-mon").style.visibility="visible";
        document.getElementById("Prod-mon").style.visibility="visible";
@@ -586,6 +623,7 @@ Web links for <b><?php echo $_GET["toolkits"]; ?><b><br>
        document.getElementById("pS-infrastructure").style.visibility="visible";
        document.getElementById("SAND").style.visibility="visible";
        document.getElementById("MEPHI-tr").style.visibility="visible";
+<<<<<<< HEAD
      }
 </script>
 <script>
@@ -601,6 +639,39 @@ Web links for <b><?php echo $_GET["toolkits"]; ?><b><br>
   <footer>
         <a href="https://sand-ci.org/"><img src="img/sand_logo.png" alt="The SAND Project logo" width="95" height="95"></a>
         <a href="https://iris-hep.org/"><img src="img/Iris-hep-6-WHITE-complete.png" alt="The IRIS-HEP logo" width="200" height="80"></a>
+=======
+       document.getElementById("ifr-psetf").style.visibility="visible";
+       document.getElementById("ifr-nox509").style.width=0;
+       document.getElementById("ifr-nox509").style.height=0;
+       document.getElementById("ifr-nox509").style.visibility="hidden";
+     }
+  }
+</script>
+<script>
+  function setcustom() {
+	var toolkit = "<?php echo $_GET["toolkits"]; ?>";
+<!--	alert("toolkit = "+ toolkit + "<");
+	if ( typeof toolkit === 'undefined' || toolkit === null || tookit == "") { -->
+           document.getElementById("no-custom-links").style.visibility="visible";
+           document.getElementById("no-custom-links").style.width="370px";
+           document.getElementById("no-custom-links").style.height="170px";
+           document.getElementById("custom-links").style.width="0px";
+           document.getElementById("custom-links").style.height="0px";
+           document.getElementById("custom-links").style.diplay="none";
+<!--	} else {
+           document.getElementById("custom-links").style.visibility="visible";
+           document.getElementById("custom-links").style.width="370px";
+           document.getElementById("custom-links").style.height="170px";
+           document.getElementById("no-custom-links").style.width="0px";
+           document.getElementById("no-custom-links").style.height="0px";
+           document.getElementById("no-custom-links").style.display="none";
+	} -->
+  }
+ </script>
+  <footer>
+        <a href="https://sand-ci.org/"><img src="img/sand_logo.png" alt="The SAND Project logo" width="95" height="95" onload="setview()"></a>
+        <a href="https://iris-hep.org/"><img src="img/Iris-hep-6-WHITE-complete.png" alt="The IRIS-HEP logo" width="200" height="80" onload="setcustom()"></a>
+>>>>>>> 0dca390be044697ae3fcc765d09a37d73d55b4fd
         <a href="https://www.nsf.gov/"><img src="img/nsf_round_logo.png" alt="The NSF logo" width="95" height="95"></a>
   </footer>
   <center>
