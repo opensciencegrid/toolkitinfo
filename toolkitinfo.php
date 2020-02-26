@@ -402,7 +402,7 @@
      </div>
   </div> 
 
-  <div class="dropdown">
+  <div class="dropdown" id="Alarms">
     <button class="dropbtn" onclick="pSAlarmsFunc()">Pipeline Alarms
       <i class="fa fa-caret-down"></i>
     </button>
@@ -461,7 +461,7 @@
       </div><br>
       <div class="tooltip" id="pS-Overview-PL">
         <span class="tooltiptext">The Overview of Packet Loss Kibana dashboard"</span>
-        <a href="https://atlas-kibana.mwt2.org/s/networking/app/kibana#/dashboard/07a03a80-beda-11e9-96c8-d543436ab024?_g=(refreshInterval:(pause:!t,value:0),time:(from:now-15d,to:now))&_a=(description:'Visualizations%20and%20metrics%20about%20measured%20packet%20loss%20results%20from%20the%20OSG%2FWLCG%20perfSONAR%20infrastructure.',filters:!(),fullScreenMode:!f,options:(darkTheme:!f,hidePanelTitles:!f,useMargins:!t),panels:!((embeddableConfig:(),gridData:(h:15,i:'7',w:24,x:0,y:0),id:'84af4350-bed9-11e9-96c8-d543436ab024',panelIndex:'7',type:visualization,version:'7.5.2'),(embeddableConfig:(),gridData:(h:15,i:'353e328e-3dc8-42cb-9d75-413a3bd3ffae',w:24,x:24,y:0),id:ff4b6f00-4745-11e9-9a8d-07fa5dee6891,panelIndex:'353e328e-3dc8-42cb-9d75-413a3bd3ffae',type:visualization,version:'7.5.2'),(embeddableConfig:(),gridData:(h:15,i:bd5ddf9b-d735-44fa-9a83-dfb2bf970f84,w:24,x:0,y:15),id:e302bf30-57fa-11ea-bad0-ff3d06e7229e,panelIndex:bd5ddf9b-d735-44fa-9a83-dfb2bf970f84,type:visualization,version:'7.5.2'),(embeddableConfig:(),gridData:(h:15,i:'7cdab484-59e5-42f7-9804-71d29575545c',w:24,x:24,y:15),id:'705ee950-57ef-11ea-bad0-ff3d06e7229e',panelIndex:'7cdab484-59e5-42f7-9804-71d29575545c',type:visualization,version:'7.5.2'),(embeddableConfig:(title:'average%20packet%20loss%20(src)%20'),gridData:(h:15,i:c655deb9-80c5-43e3-861d-9aa18fc65558,w:24,x:0,y:30),id:'82a02de0-4742-11e9-9a8d-07fa5dee6891',panelIndex:c655deb9-80c5-43e3-861d-9aa18fc65558,title:'average%20packet%20loss%20(src)%20',type:visualization,version:'7.5.2'),(embeddableConfig:(),gridData:(h:15,i:'990a3ef9-677d-44e3-8294-b2a100ab7287',w:24,x:24,y:30),id:'8fdb2a10-57df-11ea-bad0-ff3d06e7229e',panelIndex:'990a3ef9-677d-44e3-8294-b2a100ab7287',type:visualization,version:'7.5.2'),(embeddableConfig:(),gridData:(h:15,i:'545b2e51-6a50-4a68-95ab-136ac5d47055',w:24,x:0,y:45),id:d7dd3560-57e4-11ea-bad0-ff3d06e7229e,panelIndex:'545b2e51-6a50-4a68-95ab-136ac5d47055',type:visualization,version:'7.5.2'),(embeddableConfig:(),gridData:(h:15,i:'9bafba08-4f89-4a07-a197-063b79d55900',w:24,x:24,y:45),id:ceb10bc0-57e8-11ea-bad0-ff3d06e7229e,panelIndex:'9bafba08-4f89-4a07-a197-063b79d55900',type:visualization,version:'7.5.2'),(embeddableConfig:(),gridData:(h:15,i:'4dca9b83-e83b-4ccf-b242-e2113a141f34',w:24,x:0,y:60),id:'7ca32540-4d06-11e9-9a8d-07fa5dee6891',panelIndex:'4dca9b83-e83b-4ccf-b242-e2113a141f34',type:visualization,version:'7.5.2'),(embeddableConfig:(),gridData:(h:15,i:e2ac0c7a-5546-495c-ae01-518178fced71,w:24,x:24,y:60),id:ccb29920-57e7-11ea-bad0-ff3d06e7229e,panelIndex:e2ac0c7a-5546-495c-ae01-518178fced71,type:visualization,version:'7.5.2'),(embeddableConfig:(),gridData:(h:15,i:ef540c54-b0ba-4a24-82f1-d392b0f31ffc,w:24,x:0,y:75),id:e7cb34d0-57db-11ea-bad0-ff3d06e7229e,panelIndex:ef540c54-b0ba-4a24-82f1-d392b0f31ffc,type:visualization,version:'7.5.2'),(embeddableConfig:(),gridData:(h:15,i:db48d06d-9228-4afd-bed7-503af2b5b9ce,w:24,x:24,y:75),id:'142afdb0-57cf-11ea-bad0-ff3d06e7229e',panelIndex:db48d06d-9228-4afd-bed7-503af2b5b9ce,type:visualization,version:'7.5.2'),(embeddableConfig:(),gridData:(h:15,i:'6b835717-bb86-4901-9810-2df8f95b89f8',w:24,x:0,y:90),id:'4686d2d0-3c72-11e9-9a8d-07fa5dee6891',panelIndex:'6b835717-bb86-4901-9810-2df8f95b89f8',type:visualization,version:'7.5.2'),(embeddableConfig:(),gridData:(h:15,i:ff07f214-51a1-4bbb-9676-e0a38789e06c,w:24,x:24,y:90),id:'5dfecfe0-57e1-11ea-bad0-ff3d06e7229e',panelIndex:ff07f214-51a1-4bbb-9676-e0a38789e06c,type:visualization,version:'7.5.2'),(embeddableConfig:(),gridData:(h:29,i:a4a96e9f-c197-46e4-84a5-0cf84522f749,w:24,x:0,y:105),id:b67794d0-57ec-11ea-bad0-ff3d06e7229e,panelIndex:a4a96e9f-c197-46e4-84a5-0cf84522f749,type:visualization,version:'7.5.2')),query:(language:lucene,query:''),timeRestore:!f,title:'Overview%20of%20%20Packet%20Loss%20in%20OSG%2FWLCG',viewMode:view)" target="_blank">OSG Overview of Packet Loss Kibana Dashboard</a>
+        <a href="https://atlas-kibana.mwt2.org/s/networking/app/kibana#/dashboard/07a03a80-beda-11e9-96c8-d543436ab024?_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3Anow-7d%2Cto%3Anow))" target="_blank">OSG Overview of Packet Loss Kibana Dashboard</a>
       </div><br>
       <div class="tooltip" id="SAND">
         <span class="tooltiptext">This takes you to SAND project webpage"</span>
@@ -541,6 +541,7 @@ Web links for <b><?php echo $_GET["toolkits"]; ?><b><br>
      if (location.protocol !== 'https:' ) {
        <!-- This is the case if we DO NOT have x.509 credentials -->
        document.getElementById("ifr-psetf").style.display="none";
+       document.getElementById("Alarms").style.display="none";
        document.getElementById("ifr-nox509").style.display="inline";
        <!-- document.getElementById("pS-collector").style.visibility="hidden"; -->
        document.getElementById("Ingest").style.visibility="visible";
@@ -565,6 +566,7 @@ Web links for <b><?php echo $_GET["toolkits"]; ?><b><br>
      } else {
        <!-- This is the case if we DO have x.509 credentials -->
        document.getElementById("ifr-psetf").style.display="inline";
+       document.getElementById("Alarms").style.display="none";
        document.getElementById("ifr-nox509").style.display="none";
        <!-- document.getElementById("pS-collector").style.visibility="visible"; -->
        document.getElementById("Ingest").style.visibility="visible";
