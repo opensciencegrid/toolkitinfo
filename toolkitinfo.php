@@ -50,7 +50,7 @@
       <label for="toolkits" style="color:white">Select toolkit: <input list="toolkits" name="toolkits" type="text"></label>
       <input type="submit" value="Submit">
         <datalist id = "toolkits">
-        <option value = ></option>
+        <option value = ''></option>
         <option value = alice14.spbu.ru>alice14.spbu.ru</option>
         <option value = atlas-bwctl.bu.edu>atlas-bwctl.bu.edu</option>
         <option value = atlas-npt1.bu.edu>atlas-npt1.bu.edu</option>
@@ -491,28 +491,28 @@ Your selected perfSONAR Toolkit is: <b><?php echo $_GET["toolkits"]; ?></b>
    </textarea>	
  </div>
 
- <div id="custom-links" style="margin-left: 10px;vertical-align: top">
-Web links for <b><?php echo $_GET["toolkits"]; ?><b><br>
+ <div id="custom-links" style="margin-left: 10px;vertical-align: top;display: none">
+Web links for <b><?php echo $_GET[toolkits]; ?><b><br>
 
     <div class="tooltip" style="margin-left: 10px">
         <span class="tooltiptext">This is perfSONAR toolkit web interface, part of the default install of perfSONAR</span>
-	<a href="https://<?php echo $_GET["toolkits"]; ?>/toolkit" target="_blank">This toolkit's web interface</a><br>
-    </div><br>
-    <div class="tooltip" style="margin-left: 10px" id="cl-avail">
-        <span class="tooltiptext">This is the Check_MK-based service availabiity timeline for the last 8 days.  The timespace and various filter options can be adjusted on this page using the "monitor/screwdriver" icon</span>
-	<a href="https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Ffilled_in%3Davoptions%26_transid%3D1553115578%252F640181828%26avoptions%3Dset%26avo_rangespec_sel%3D2%26avo_rangespec_13_days%3D0%26avo_rangespec_13_hours%3D0%26avo_rangespec_13_minutes%3D0%26avo_rangespec_13_seconds%3D0%26avo_rangespec_14_0_year%3D2019%26avo_rangespec_14_0_month%3D3%26avo_rangespec_14_0_day%3D20%26avo_rangespec_14_1_year%3D2019%26avo_rangespec_14_1_month%3D3%26avo_rangespec_14_1_day%3D20%26avo_labelling%3D1%26avo_av_levels_value_0%3D99.000%26avo_av_levels_value_1%3D95.000%26avo_outage_statistics_0%3D1%26avo_outage_statistics_1%3D1%26avo_timeformat_0%3D-5096062089839120012%26avo_timeformat_1%3D2860216163255499133%26avo_timeformat_2%3D6179950607411978388%26avo_grouping%3D-7985492147856592190%26avo_dateformat%3D2341086994080993429%26avo_summary%3D-3477289025967913046%26avo_downtimes_p_include%3D2716855627943083503%26avo_consider_p_flapping%3Don%26avo_consider_p_host_down%3Don%26avo_consider_p_unmonitored%3Don%26avo_state_grouping_p_warn%3D-3087914045472848368%26avo_state_grouping_p_unknown%3D-8288641604770303033%26avo_state_grouping_p_host_down%3D2723210965512899648%26avo_av_filter_outages_p_warn%3D0.0%26avo_av_filter_outages_p_crit%3D0.0%26avo_av_filter_outages_p_non-ok%3D0.0%26avo_host_state_grouping_p_unreach%3D-6138262812469222625%26avo_service_period%3D2716855627943083503%26avo_notification_period%3D6279241457472762700%26avo_short_intervals%3D0%26avo_timelimit_days%3D0%26avo_timelimit_hours%3D0%26avo_timelimit_minutes%3D0%26avo_timelimit_seconds%3D30%26avo_logrow_limit%3D5000%26apply%3DApply%26selection%3D9c6dc88e-b7f4-44d1-b8f3-f8e01054e676%26host%3D<?php echo $_GET["toolkits"]; ?>%26site%3Detf%26view_name%3Dhost%26mode%3Davailability%26av_mode%3Dtimeline" target="_blank">This toolkit's timeline of service availability</a><br>
-    </div><br>
-   <div class="tooltip" style="margin-left: 10px" id="cl-checkmk">
-        <span class="tooltiptext">This is Check_MK-based service monitoring from the Experiments Testing Framework (ETF).  Ideally all tests show "Green".  If not, clicking on specificy tests can provide further details.</span>
-        <a href="https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Fhost%3D<?php echo $_GET["toolkits"]; ?>%26site%3Detf%26view_name%3Dhost" target="_blank">Monitoring of this toolkit's services/configuration</a><br>
+	<a href="https://<?php echo $_GET[toolkits]; ?>/toolkit" target="_blank">This toolkit's web interface</a><br>
     </div><br>
     <div class="tooltip" style="margin-left: 10px">
         <span class="tooltiptext">We use pSConfig and PWA (pSConfig Web Administrator) to manage our testing configuration for OSG/WLCG.  Clicking here will return the JSON configuration details being provided to this Toolkit host.</span>
-        <a href="http://psconfig.opensciencegrid.org/pub/auto/<?php echo $_GET["toolkits"]; ?>" target="_blank">Testing insructions for this toolkit (JSON)</a><br>
+        <a href="http://psconfig.opensciencegrid.org/pub/auto/<?php echo $_GET[toolkits]; ?>" target="_blank">Testing insructions for this toolkit (JSON)</a><br>
     </div><br>
     <div class="tooltip" style="margin-left: 10px">
         <span class="tooltiptext">This link will provide configuration and operational details in JSON format for this specific perfSONAR Toolkit instance.  We recommend installing a JSON parser ("JSON View" or others) in your browser.</span>
-        <a href="https://<?php echo $_GET["toolkits"]; ?>/toolkit/services/host.cgi?method=get_summary" target="_blank">This toolkit's settings and status</a><br>
+        <a href="https://<?php echo $_GET[toolkits]; ?>/toolkit/services/host.cgi?method=get_summary" target="_blank">This toolkit's settings and status</a><br>
+    </div><br>
+    <div class="tooltip" style="margin-left: 10px" id="cl-avail">
+        <span class="tooltiptext">This is the Check_MK-based service availabiity timeline for the last 8 days.  The timespace and various filter options can be adjusted on this page using the "monitor/screwdriver" icon</span>
+	<a href="https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Ffilled_in%3Davoptions%26_transid%3D1553115578%252F640181828%26avoptions%3Dset%26avo_rangespec_sel%3D2%26avo_rangespec_13_days%3D0%26avo_rangespec_13_hours%3D0%26avo_rangespec_13_minutes%3D0%26avo_rangespec_13_seconds%3D0%26avo_rangespec_14_0_year%3D2019%26avo_rangespec_14_0_month%3D3%26avo_rangespec_14_0_day%3D20%26avo_rangespec_14_1_year%3D2019%26avo_rangespec_14_1_month%3D3%26avo_rangespec_14_1_day%3D20%26avo_labelling%3D1%26avo_av_levels_value_0%3D99.000%26avo_av_levels_value_1%3D95.000%26avo_outage_statistics_0%3D1%26avo_outage_statistics_1%3D1%26avo_timeformat_0%3D-5096062089839120012%26avo_timeformat_1%3D2860216163255499133%26avo_timeformat_2%3D6179950607411978388%26avo_grouping%3D-7985492147856592190%26avo_dateformat%3D2341086994080993429%26avo_summary%3D-3477289025967913046%26avo_downtimes_p_include%3D2716855627943083503%26avo_consider_p_flapping%3Don%26avo_consider_p_host_down%3Don%26avo_consider_p_unmonitored%3Don%26avo_state_grouping_p_warn%3D-3087914045472848368%26avo_state_grouping_p_unknown%3D-8288641604770303033%26avo_state_grouping_p_host_down%3D2723210965512899648%26avo_av_filter_outages_p_warn%3D0.0%26avo_av_filter_outages_p_crit%3D0.0%26avo_av_filter_outages_p_non-ok%3D0.0%26avo_host_state_grouping_p_unreach%3D-6138262812469222625%26avo_service_period%3D2716855627943083503%26avo_notification_period%3D6279241457472762700%26avo_short_intervals%3D0%26avo_timelimit_days%3D0%26avo_timelimit_hours%3D0%26avo_timelimit_minutes%3D0%26avo_timelimit_seconds%3D30%26avo_logrow_limit%3D5000%26apply%3DApply%26selection%3D9c6dc88e-b7f4-44d1-b8f3-f8e01054e676%26host%3D<?php echo $_GET[toolkits]; ?>%26site%3Detf%26view_name%3Dhost%26mode%3Davailability%26av_mode%3Dtimeline" target="_blank">This toolkit's timeline of service availability</a><br>
+    </div><br>
+   <div class="tooltip" style="margin-left: 10px" id="cl-checkmk">
+        <span class="tooltiptext">This is Check_MK-based service monitoring from the Experiments Testing Framework (ETF).  Ideally all tests show "Green".  If not, clicking on specificy tests can provide further details.</span>
+        <a href="https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Fhost%3D<?php echo $_GET[toolkits]; ?>%26site%3Detf%26view_name%3Dhost" target="_blank">Monitoring of this toolkit's services/configuration</a><br>
     </div><br>
 
 
