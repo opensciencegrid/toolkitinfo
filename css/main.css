@@ -177,7 +177,7 @@ nav {
   padding: 14px 16px;
   text-decoration: none;
 }
-# Tabs with Dropdowns
+/*Dropdowns for Tabs with Links*/
 .dropdown {
   float: left;
   overflow: hidden;
