@@ -382,7 +382,7 @@
     <button class="dropbtn" onclick="psTEST()">Shearer Test Tabs
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content" id="pSDocs">
+    <div class="dropdown-content" id="psTEST">
       <div class="tooltip" id="Shearer-Test-Link">
         <span class="tooltiptext">This takes you to the AGLT2 Logstash Dashboard Overview"</span>
         <a href="http://atgrid.grid.umich.edu/app/kibana#/dashboard/77a06a70-e556-11e8-b48b-418a0d7931f4?_a=h@a402b53&_g=h@c823129" target="_blank">AGLT2 Logstash Overview</a>
