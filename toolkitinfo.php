@@ -379,7 +379,7 @@
     </div>
   </div>
   <div class="dropdown">
-    <button class="dropbtn" onclick="psTEST()">Shearer Test Tabs
+    <button class="dropbtn" onclick="psTESTFunc()">Shearer Test Tabs
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content" id="psTEST">
