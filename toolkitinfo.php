@@ -529,7 +529,7 @@ Web links for <b><?php echo htmlspecialchars($_GET[toolkits]); ?><b><br>
     </div><br>
     <div class="tooltip" style="margin-left: 10px">
         <span class="tooltiptext">This is the Testing for the new Subpages that are going to be created to replace the dropdown bar</span>
-        <a href="pages/documentation.html" target="_blank">New Testing Links for Subpages</a><br>
+        <a href="documentation.html" target="_blank">New Testing Links for Subpages</a><br>
     </div><br>
 
  </div>
