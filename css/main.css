@@ -192,22 +192,28 @@ a.link-preview .link-area .og-title {
   padding-bottom: 15px;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0 4px;
+.row
+{
+display: flex;
+justify-content: space between;
+flex-wrap: wrap; /* added - this tells Flex to wrap onto a new line, if there is no space. */
 }
 
-/* Create two equal columns that sits next to each other */
-.column {
-  flex: 50%;
-  padding: 0 4px;
+.column
+{
+display: inline block;
+padding: 0.5em;
+display: block;
+width: 33.333%;
+box-sizing: border-box; /* added - this change the way padding is applied, so it always stays at 33.33%, regardless of padding */
 }
 
+/* added - these are not needed, but make it look nicer */
 .column img {
-  margin-top: 8px;
-  vertical-align: middle;
+  display: block; /* removes the spacing underneath the image */
+  width: 100%; /* sets the width to the parents width */
+  height: 100%; /* set the height to the parents height */
+  object-fit: cover; /* prevents image from stretching */
 }
 
 /*Dropdowns for Tabs with Links*/
