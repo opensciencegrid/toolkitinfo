@@ -188,14 +188,14 @@ a.link-preview .link-area {
   display: table-caption;              /*  make text wrap under image  */
 }
 a.link-preview .link-area .og-title {
-  font-size: 22px;
+  font-size: 30px;
   padding-bottom: 15px;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 50px;
 }
 
 /* Create two equal columns that sits next to each other */
