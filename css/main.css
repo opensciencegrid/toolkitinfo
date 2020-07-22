@@ -210,8 +210,8 @@ box-sizing: border-box; /* added - this change the way padding is applied, so it
 
 /* added - these are not needed, but make it look nicer */
 .column img {
-  display: block; /* removes the spacing underneath the image */
   object-fit: cover; /* prevents image from stretching */
+  margin-top: 12px;
 }
 
 /*Dropdowns for Tabs with Links*/
