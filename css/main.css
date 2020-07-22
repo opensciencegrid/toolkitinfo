@@ -177,6 +177,38 @@ nav {
   padding: 14px 16px;
   text-decoration: none;
 }
+
+/*Creating infrastructure for Clickable Image Links*/
+a.link-preview {
+  display: inline-block;
+  border: 2px dotted black;
+  padding: 5px;
+}
+a.link-preview .link-area {
+  display: table-caption;              /*  make text wrap under image  */
+}
+a.link-preview .link-area .og-title {
+  font-size: 22px;
+  padding-bottom: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 50px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
 /*Dropdowns for Tabs with Links*/
 .dropdown {
   float: left;
