@@ -180,7 +180,7 @@ nav {
 
 /*Creating infrastructure for Clickable Image Links*/
 a.link-preview {
-  display: inline-block;
+  display: flex;
   border: 2px dotted black;
   padding: 5px;
 }
