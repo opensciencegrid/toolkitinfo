@@ -195,6 +195,7 @@ a.link-preview .link-area .og-title {
 .row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 0 4px;
 }
 
