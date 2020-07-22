@@ -211,8 +211,6 @@ box-sizing: border-box; /* added - this change the way padding is applied, so it
 /* added - these are not needed, but make it look nicer */
 .column img {
   display: block; /* removes the spacing underneath the image */
-  width: 100%; /* sets the width to the parents width */
-  height: 100%; /* set the height to the parents height */
   object-fit: cover; /* prevents image from stretching */
 }
 
