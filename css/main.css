@@ -178,20 +178,6 @@ nav {
   text-decoration: none;
 }
 
-/*Creating infrastructure for Clickable Image Links*/
-a.link-preview {
-  display: flex;
-  border: 2px dotted black;
-  padding: 5px;
-}
-a.link-preview .link-area {
-  display: table-caption;              /*  make text wrap under image  */
-}
-a.link-preview .link-area .og-title {
-  font-size: 30px;
-  padding-bottom: 15px;
-}
-
 .row
 {
 display: flex;
@@ -201,7 +187,7 @@ flex-wrap: wrap; /* added - this tells Flex to wrap onto a new line, if there is
 
 .column
 {
-display: flex;
+display: inline-block;
 padding: 0.5em;
 display: block;
 width: 33.333%;
