@@ -366,7 +366,6 @@
 
 </div>
 
-Your selected perfSONAR Toolkit is: <b><?php echo htmlspecialchars($_GET[toolkits]); ?></b>
 </nav>
 
 <div class="flex-container" style="min-height: 220px;">
