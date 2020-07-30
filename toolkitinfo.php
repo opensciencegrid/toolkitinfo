@@ -380,16 +380,6 @@
    </textarea>	
  </div>
 
-
- </div>
- <div id="no-custom-links">
-   <textarea id="no-cust-text" style="vertical-align: middle;min-height: 80px;min-width: 400px;margin-right: 10px; margin-left: 10px">
-	You have not selected a toolkit for customized links.
-	Please use the above "Select toolkit" drop-down
-        to pick a specific toolkit.
-   </textarea>	
- </div>
-
 </div>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
