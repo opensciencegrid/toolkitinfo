@@ -370,12 +370,12 @@
 
 <div class="row">
    <div class="column">
-      <a href=https://www.google.com> target="_blank"><button class="block">Test Button 1</button></a>
-      <a href=https://www.google.com> target="_blank"><button class="block">Test Button 3</button></a>
+      <a href=https://www.google.com target="_blank"><button class="block">Test Button 1</button></a>
+      <a href=https://www.google.com target="_blank"><button class="block">Test Button 3</button></a>
    </div>     
    <div class="column">
-      <a href=https://www.google.com> target="_blank"><button class="block">Test Button 2</button></a>
-      <a href=https://www.google.com> target="_blank"><button class="block">Test Button 4</button></a>
+      <a href=https://www.google.com target="_blank"><button class="block">Test Button 2</button></a>
+      <a href=https://www.google.com target="_blank"><button class="block">Test Button 4</button></a>
    </div>
 </div>
 
