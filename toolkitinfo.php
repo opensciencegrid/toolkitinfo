@@ -368,6 +368,18 @@
 
 </nav>
 
+<div class="flex-container" style="min-height: 220px;">
+ <div>
+   <iframe id="ifr-psetf" name="ifr-psetf" style="display: none;float:right" src="https://psetf.opensciencegrid.org/etf/check_mk/view.py?filled_in=filter&host_regex=<?php echo htmlspecialchars($_GET[toolkits]); ?>&selection=ff14182e-35bd-412e-a95a-526b80959b00&view_name=searchhost" height="220" width="500"></iframe><br>
+ </div>
+ <div>
+   <textarea id="ifr-nox509" style="display: inline;min-height: 80px;min-width: 410px; float:right;margin-left: 10px;margin-right: 10px;vertical-align: middle" rows=3>
+	You don't seem to have an x.509 credential.
+	Some items are not accessible without such a credential 
+        and are removed from this page and its menus.
+   </textarea>	
+ </div>
+
 <div class="row">
    <div class="column">
       <a href=https://www.google.com target="_blank"><button class="block">Test Button 1</button></a>
@@ -380,18 +392,6 @@
       <a href=https://www.google.com target="_blank"><button class="block">Test Button 4</button></a>
    </div>
 </div>
-
-<div class="flex-container" style="min-height: 220px;">
- <div>
-   <iframe id="ifr-psetf" name="ifr-psetf" style="display: none;float:right" src="https://psetf.opensciencegrid.org/etf/check_mk/view.py?filled_in=filter&host_regex=<?php echo htmlspecialchars($_GET[toolkits]); ?>&selection=ff14182e-35bd-412e-a95a-526b80959b00&view_name=searchhost" height="220" width="500"></iframe><br>
- </div>
- <div>
-   <textarea id="ifr-nox509" style="display: inline;min-height: 80px;min-width: 410px; float:right;margin-left: 10px;margin-right: 10px;vertical-align: middle" rows=3>
-	You don't seem to have an x.509 credential.
-	Some items are not accessible without such a credential 
-        and are removed from this page and its menus.
-   </textarea>	
- </div>
 
 </div>
 
