@@ -229,7 +229,7 @@ box-sizing: border-box; /* added - this change the way padding is applied, so it
   margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+.navbar a:hover, .dropbtn {
   background-color: red;
 }
 
