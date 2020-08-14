@@ -215,6 +215,7 @@ box-sizing: border-box; /* added - this change the way padding is applied, so it
 .dropdown {
   float: left;
   overflow: hidden;
+  border: 2px solid white;
 }
 
 .dropdown .dropbtn {
