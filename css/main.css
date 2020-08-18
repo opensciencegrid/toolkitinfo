@@ -181,8 +181,8 @@ nav {
 .block {
   display: block;
   width: 100%;
-  border: none;
-  background-color: #3F72AF;
+  border: 2px solid #3F72AF;
+  background-color: #DBE2EF;
   padding: 14px 28px;
   font-size: 16px;
   cursor: pointer;
