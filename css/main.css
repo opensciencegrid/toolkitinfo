@@ -190,7 +190,7 @@ nav {
   color: #112D4E;
 }
 
-.block a:hover {
+.navbar a:hover, .block {
   background-color: red;
 }
 
