@@ -57,6 +57,7 @@
 </div>
 
 </nav>
+<article>
 <h1> Please Select A Category Based on The Question You Have </h1>
 <div class="row">
    <div class="column">
@@ -72,7 +73,7 @@
 </div>
 
 </div>
-
+</article>
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
