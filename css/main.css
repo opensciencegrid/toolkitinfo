@@ -104,7 +104,7 @@ body {
         background-position: center;
         background-size: cover; 
         background-repeat: no-repeat:
-        background-color: #00ADB5;
+        background-color: #cc88dd;
 }
 
 article {
@@ -165,7 +165,7 @@ nav {
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #393E46;
   font-family: Arial, Helvetica, sans-serif;
 }
 
