@@ -221,9 +221,9 @@ box-sizing: border-box; /* added - this change the way padding is applied, so it
 .dropdown .dropbtn {
   cursor: pointer;
   font-size: 16px;  
-  border: 2px solid white;
+  border: 2px solid #3F72AF;
   outline: none;
-  color: white;
+  color: #3F72AF;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
