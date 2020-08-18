@@ -194,7 +194,7 @@ nav {
 display: flex;
 justify-content: space-evenly;
 flex-wrap: wrap; /* added - this tells Flex to wrap onto a new line, if there is no space. */
-background-color: #000000;
+background-color: #EEEEEE;
 }
 
 .column
