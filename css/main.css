@@ -190,6 +190,10 @@ nav {
   color: #112D4E;
 }
 
+.block a:hover {
+  background-color: red;
+}
+
 .row
 {
 display: flex;
