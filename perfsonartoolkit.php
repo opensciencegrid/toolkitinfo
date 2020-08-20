@@ -44,6 +44,8 @@
 
 
 <nav>
+
+<div class="navbar">
   <div class="dropdown">
     <a href="index.html"><button class="dropbtn">Main Page</button></a>
     <a href="documentation.html"><button class="dropbtn">Documentation</button></a>
@@ -52,8 +54,6 @@
     <a href="analyticsanddashboards.html"><button class="dropbtn">Analytics and Dashboards</button></a>
     <a href="perfsonartoolkit.html"><button class="dropbtn">Toolkit Specific Page</button></a>
   </div>
-
-<div class="navbar">
     <div class="form">
       <form action="/toolkitinfo/perfsonartoolkit.php" method="get">
       <label for="toolkits" style="color:black">Select toolkit: <input list="toolkits" name="toolkits" type="text"></label>
@@ -367,7 +367,7 @@
 
 </div>
 
-<p style="color:white">Your selected perfSONAR Toolkit is: <b><?php echo htmlspecialchars($_GET[toolkits]); ?></b></p>
+<p style="color:white">Your selected perfSONAR Toolkit is: <b><?php echo htmlspecialchars_decode($_GET[toolkits]); ?></b></p>
 </nav>
 
 <div class="flex-container" style="min-height: 220px;">
