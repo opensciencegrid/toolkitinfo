@@ -367,11 +367,7 @@
 
 </div>
 
-<p style="color:white">Your selected perfSONAR Toolkit is: <b><? echo "test toolkits"; ?></b></p>
-
-<? echo "Testing" ?>
-<?php echo "Testing" ?>
-<? php echo "Testing" ?>
+<p style="color:white">Your selected perfSONAR Toolkit is: <b><?php echo htmlspecialchars($_GET[toolkits]); ?></b></p>
 </nav>
 
 <div class="flex-container" style="min-height: 220px;">
