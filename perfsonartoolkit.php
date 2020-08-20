@@ -368,6 +368,10 @@
 </div>
 
 <p style="color:white">Your selected perfSONAR Toolkit is: <b><? echo "test toolkits"; ?></b></p>
+
+<? echo "Testing" ?>
+<?php echo "Testing" ?>
+<? php echo "Testing" ?>
 </nav>
 
 <div class="flex-container" style="min-height: 220px;">
