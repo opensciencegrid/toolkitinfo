@@ -56,7 +56,7 @@
   </div>
 
     <div class="form">
-      <form action="/toolkitinfo/perfsonartoolkit.html" method="get">
+      <form action="/toolkitinfo/perfsonartoolkit.php" method="get">
       <label for="toolkits" style="color:black">Select toolkit: <input list="toolkits" name="toolkits" type="text"></label>
       <input type="submit" value="Submit">
         <datalist id = "toolkits">
