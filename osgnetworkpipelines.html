@@ -116,6 +116,8 @@
        <!-- This is the case if we DO NOT have x.509 credentials -->
        document.getElementById("ifr-psetf").style.display="none";
        document.getElementById("Alarms").style.display="none";
+       document.getElementById("normal-osgpipelines").style.display="none";
+       document.getElementById("Red-osgpipelines").style.display="inline";
        document.getElementById("ifr-nox509").style.display="inline";
        <!-- document.getElementById("pS-collector").style.visibility="hidden"; -->
        document.getElementById("Ingest").style.visibility="visible";
@@ -139,11 +141,12 @@
        document.getElementById("MEPHI-tr").style.visibility="visible";
        document.getElementById("cl-avail").style.visibility="hidden";
        document.getElementById("cl-checkmk").style.visibility="hidden";
-       document.getElementById("normal-osgpipelines").style.display="none";
      } else {
        <!-- This is the case if we DO have x.509 credentials -->
        document.getElementById("ifr-psetf").style.display="inline";
        document.getElementById("Alarms").style.display="none";
+       document.getElementById("Red-osgpipelines").style.display="none";
+       document.getElementById("normal-osgpipelines").style.display="inline";
        document.getElementById("ifr-nox509").style.display="none";
        <!-- document.getElementById("pS-collector").style.visibility="visible"; -->
        document.getElementById("Ingest").style.visibility="visible";
@@ -167,7 +170,6 @@
        document.getElementById("MEPHI-tr").style.visibility="visible";
        document.getElementById("cl-avail").style.visibility="visible";
        document.getElementById("cl-checkmk").style.visibility="visible";
-       document.getElementById("Red-osgpipelines").style.display="none";
      }
 </script>
 <script>
