@@ -70,7 +70,7 @@
    <div class="column">
       <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/2760eaa0-b9ba-11ea-a57f-cfdaa2417d86 target="_blank"><button class="block">Are you Interested in your Site's Overall Performance?</button></a>
       <br> </br>
-      <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/35976890-d8ca-11ea-9344-2da4788d78a4 target="_blank"><button class="block">Are you Interested in the PAth that Data Takes from your Site to Another?</button></a>
+      <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/35976890-d8ca-11ea-9344-2da4788d78a4 target="_blank"><button class="block">Are you Interested in the Path that Data Takes from your Site to Another?</button></a>
    </div>
 </div>
 
