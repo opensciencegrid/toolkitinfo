@@ -61,14 +61,16 @@
 <h1> Please Select A Category Based on The Question You Have </h1>
 <div class="row">
    <div class="column">
-      <a href=https://www.google.com target="_blank"><button class="block">Test Button 1</button></a>
+      <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/00b1ce70-d589-11ea-9344-2da4788d78a4  target="_blank"><button class="block">Do You Have General Problems with Your Site?</button></a>
       <br> </br>
-      <a href=https://www.google.com target="_blank"><button class="block">Test Button 3</button></a>
+      <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/82552400-d8cb-11ea-9344-2da4788d78a4 target="_blank"><button class="block">Does your Site Lose a lot of Data when Transferring to Another Site?</button></a>
+      <br> </br>
+      <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/57e3c0b0-d7f3-11ea-9344-2da4788d78a4  target="_blank"><button class="block">Do You have Problems with Data Transfer or Throughput for your Site?</button></a>
    </div>     
    <div class="column">
-      <a href=https://www.google.com target="_blank"><button class="block">Test Button 2</button></a>
+      <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/2760eaa0-b9ba-11ea-a57f-cfdaa2417d86 target="_blank"><button class="block">Are you Interested in your Site's Overall Performance?</button></a>
       <br> </br>
-      <a href=https://www.google.com target="_blank"><button class="block">Test Button 4</button></a>
+      <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/35976890-d8ca-11ea-9344-2da4788d78a4 target="_blank"><button class="block">Are you Interested in the PAth that Data Takes from your Site to Another?</button></a>
    </div>
 </div>
 
