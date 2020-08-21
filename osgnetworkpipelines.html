@@ -110,7 +110,7 @@
 
 
 <!-- We want a function that will change visibility of page items based on if we have x.509 credentials or not -->
-<script>
+<!-- <script>
    <!-- Implement visibility of elements based upon x.509 presence -->
      if (location.protocol !== 'https:' ) {
        <!-- This is the case if we DO NOT have x.509 credentials -->
@@ -121,7 +121,7 @@
        document.getElementById("normal-osgpipelines").style.display="inline";
        document.getElementById("Red-osgpipelines").style.display="none";
      }
-</script>
+</script> -->
 <script>
 	var toolkit = "<?php echo htmlspecialchars($_GET[toolkits]); ?>";
 	if ( typeof toolkit === 'undefined' || toolkit === null || toolkit == "") {
