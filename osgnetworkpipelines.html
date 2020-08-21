@@ -115,11 +115,11 @@
      if (location.protocol !== 'https:' ) {
        <!-- This is the case if we DO NOT have x.509 credentials -->
        document.getElementById("normal-osgpipelines").style.display="none";
-       document.getElementById("Red-osgpipelines").style.display="block";
+       document.getElementById("Red-osgpipelines").style.display="inline";
      } else {
        <!-- This is the case if we DO have x.509 credentials -->
+       document.getElementById("normal-osgpipelines").style.display="inline";
        document.getElementById("Red-osgpipelines").style.display="none";
-       document.getElementById("normal-osgpipelines").style.display="block";
      }
 </script>
 <script>
