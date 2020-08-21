@@ -381,9 +381,6 @@
         and are removed from this page and its menus.
    </textarea>	
  </div>
- <div>
-   <h2 id="test-text"> Testing this text </h2>
- </div>
 
  <div id="custom-links" style="margin-left: 10px;vertical-align: top;display: none">
 Web links for <b><?php echo htmlspecialchars($_GET[toolkits]); ?><b><br>
@@ -436,7 +433,6 @@ Web links for <b><?php echo htmlspecialchars($_GET[toolkits]); ?><b><br>
        document.getElementById("ifr-psetf").style.display="none";
        document.getElementById("Alarms").style.display="none";
        document.getElementById("ifr-nox509").style.display="inline";
-       document.getElementById("test-text").style.display="none";
        <!-- document.getElementById("pS-collector").style.visibility="hidden"; -->
        document.getElementById("Ingest").style.visibility="visible";
        document.getElementById("ITB-mon").style.visibility="hidden";

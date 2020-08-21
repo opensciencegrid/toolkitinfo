@@ -114,62 +114,12 @@
    <!-- Implement visibility of elements based upon x.509 presence -->
      if (location.protocol !== 'https:' ) {
        <!-- This is the case if we DO NOT have x.509 credentials -->
-       document.getElementById("ifr-psetf").style.display="none";
-       document.getElementById("Alarms").style.display="none";
        document.getElementById("normal-osgpipelines").style.display="none";
-       document.getElementById("Red-osgpipelines").style.display="inline";
-       document.getElementById("ifr-nox509").style.display="inline";
-       <!-- document.getElementById("pS-collector").style.visibility="hidden"; -->
-       document.getElementById("Ingest").style.visibility="visible";
-       document.getElementById("ITB-mon").style.visibility="hidden";
-       document.getElementById("Prod-mon").style.visibility="hidden";
-       document.getElementById("PL-alarm").style.visibility="visible";
-       document.getElementById("PL-overview").style.visibility="visible";
-       document.getElementById("PL-topN").style.visibility="visible";
-       document.getElementById("OSG-net-docs").style.visibility="visible";
-       document.getElementById("pS-docs").style.visibility="visible";
-       document.getElementById("ES-Fasterdata").style.visibility="visible";
-       document.getElementById("ES-trouble").style.visibility="visible";
-       document.getElementById("MaDDash").style.visibility="visible";
-       document.getElementById("pSConfig").style.visibility="visible";
-       document.getElementById("psetf").style.visibility="hidden";
-       document.getElementById("WLCG-grafana").style.visibility="visible";
-       document.getElementById("OSG-ELK-Analytics").style.visibility="visible";
-       document.getElementById("pS-infrastructure").style.visibility="visible";
-       document.getElementById("pS-Overview-PL").style.visibility="visible";
-       document.getElementById("SAND").style.visibility="visible";
-       document.getElementById("MEPHI-tr").style.visibility="visible";
-       document.getElementById("cl-avail").style.visibility="hidden";
-       document.getElementById("cl-checkmk").style.visibility="hidden";
+       document.getElementById("Red-osgpipelines").style.display="block";
      } else {
        <!-- This is the case if we DO have x.509 credentials -->
-       document.getElementById("ifr-psetf").style.display="inline";
-       document.getElementById("Alarms").style.display="none";
        document.getElementById("Red-osgpipelines").style.display="none";
-       document.getElementById("normal-osgpipelines").style.display="inline";
-       document.getElementById("ifr-nox509").style.display="none";
-       <!-- document.getElementById("pS-collector").style.visibility="visible"; -->
-       document.getElementById("Ingest").style.visibility="visible";
-       document.getElementById("ITB-mon").style.visibility="visible";
-       document.getElementById("Prod-mon").style.visibility="visible";
-       document.getElementById("PL-alarm").style.visibility="visible";
-       document.getElementById("PL-overview").style.visibility="visible";
-       document.getElementById("PL-topN").style.visibility="visible";
-       document.getElementById("OSG-net-docs").style.visibility="visible";
-       document.getElementById("pS-docs").style.visibility="visible";
-       document.getElementById("ES-Fasterdata").style.visibility="visible";
-       document.getElementById("ES-trouble").style.visibility="visible";
-       document.getElementById("MaDDash").style.visibility="visible";
-       document.getElementById("pSConfig").style.visibility="visible";
-       document.getElementById("psetf").style.visibility="visible";
-       document.getElementById("WLCG-grafana").style.visibility="visible";
-       document.getElementById("OSG-ELK-Analytics").style.visibility="visible";
-       document.getElementById("pS-infrastructure").style.visibility="visible";
-       document.getElementById("pS-Overview-PL").style.visibility="visible";
-       document.getElementById("SAND").style.visibility="visible";
-       document.getElementById("MEPHI-tr").style.visibility="visible";
-       document.getElementById("cl-avail").style.visibility="visible";
-       document.getElementById("cl-checkmk").style.visibility="visible";
+       document.getElementById("normal-osgpipelines").style.display="block";
      }
 </script>
 <script>
