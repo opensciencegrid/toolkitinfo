@@ -61,7 +61,7 @@
 </nav>
 <article>
  <h1> OSG Network Pipelines </h1>
- <div class="row">
+ <div class="row" id="Red-osgpipelines">
      <div class="column">
         <h2> perfSONAR Ingest Rate </h2>
         <i> This is the Kibana interface to the University of Chicago ATLAS Analytics platform which hosts our network metrics (as well as lots of other analytics data) </i>
@@ -73,12 +73,32 @@
         <img src="img/error_site_image.png" width="450" height="300"></a>
      </div>
      <div class="column">
+        <h2 style="background-color:red"> Status of ITB Services </h2>
+        <i style="background-color:red"> This is the OSG/WLCG perfSONAR Infrastructure Test Bed (ITB) service monitoring host, based upon the Experiments Testing Framework (ETF) and Check_MK </i>
+        <a href="https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Faggr_group%3DOSG%2520Network%2520ITB%2520Servers%26view_name%3Daggr_group" target="_blank" style="background-color:red">
+        <img src="img/error_site_image.png" width="450" height="300"></a>
+    </div>
+ </div>
+
+ <div class="row" id="normal-osgpipelines">
+     <div class="column">
+        <h2> perfSONAR Ingest Rate </h2>
+        <i> This is the Kibana interface to the University of Chicago ATLAS Analytics platform which hosts our network metrics (as well as lots of other analytics data) </i>
+        <a href="https://atlas-kibana.mwt2.org/s/networking/app/kibana#/visualize/edit/58bf3e80-18d1-11e8-8f2f-ab6704660c79?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-7d,to:now))&_a=(filters:!(),linked:!f,query:(language:lucene,query:(match_all:())),uiState:(),vis:(aggs:!(),params:(expression:'.es(index%3D!'ps_owd!',%20q%3D!'*!').label(!'OWD!'),%0A.es(index%3D!'ps_throughput!',%20q%3D!'*!').label(!'throughput!').yaxis(2),%0A.es(index%3D!'ps_meta!',%20q%3D!'*!').label(!'metadata!').yaxis(2),%0A.es(index%3D!'ps_status!',%20q%3D!'*!').label(!'status!').yaxis(2),%0A.es(index%3D!'ps_trace!',%20q%3D!'*!').label(!'traceroute!'),%0A.es(index%3D!'ps_packetloss!',%20q%3D!'*!').label(!'packet%20loss!'),%0A.es(index%3D!'ps_retransmits!',%20q%3D!'*!').label(!'retransmits!').yaxis(2)',interval:auto,type:timelion),title:'PerfSONAR%20ingest',type:timelion))" target="_blank">
+        <img src="img/perfSONAR_Ingest_Rate_image.png" width="450" height="300"></a>
+        <h2> Status of Production Services </h2>
+        <i> This is the OSG/WLCG perfSONAR Production service monitoring host, based upon the Experiments Testing Framework (ETF) and Check_MK </i>
+        <a href ="https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Faggr_group%3DOSG%2520Production%2520Network%2520Services%26view_name%3Daggr_group" target="_blank">
+        <img src="img/error_site_image.png" width="450" height="300"></a>
+     </div>
+     <div class="column">
         <h2> Status of ITB Services </h2>
         <i> This is the OSG/WLCG perfSONAR Infrastructure Test Bed (ITB) service monitoring host, based upon the Experiments Testing Framework (ETF) and Check_MK </i>
         <a href="https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Faggr_group%3DOSG%2520Network%2520ITB%2520Servers%26view_name%3Daggr_group" target="_blank">
         <img src="img/error_site_image.png" width="450" height="300"></a>
     </div>
  </div>
+
 </article>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
@@ -119,6 +139,8 @@
        document.getElementById("MEPHI-tr").style.visibility="visible";
        document.getElementById("cl-avail").style.visibility="hidden";
        document.getElementById("cl-checkmk").style.visibility="hidden";
+       document.getElementById("Red-osgpipelines").style.visibility="visible";
+       document.getElementById("normal-osgpipelines").style.visibility="hidden";
      } else {
        <!-- This is the case if we DO have x.509 credentials -->
        document.getElementById("ifr-psetf").style.display="inline";
@@ -146,6 +168,8 @@
        document.getElementById("MEPHI-tr").style.visibility="visible";
        document.getElementById("cl-avail").style.visibility="visible";
        document.getElementById("cl-checkmk").style.visibility="visible";
+       document.getElementById("Red-osgpipelines").style.visibility="hidden";
+       document.getElementById("normal-osgpipelines").style.visibility="visible";
      }
 </script>
 <script>
