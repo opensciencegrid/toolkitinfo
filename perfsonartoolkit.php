@@ -381,6 +381,9 @@
         and are removed from this page and its menus.
    </textarea>	
  </div>
+ <div>
+   <h2 id="test-text"> Testing this text </h2>
+ </div>
 
  <div id="custom-links" style="margin-left: 10px;vertical-align: top;display: none">
 Web links for <b><?php echo htmlspecialchars($_GET[toolkits]); ?><b><br>
