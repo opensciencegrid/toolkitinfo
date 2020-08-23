@@ -458,7 +458,6 @@ Web links for <b><?php echo htmlspecialchars($_GET[toolkits]); ?><b><br>
      } else {
        <!-- This is the case if we DO have x.509 credentials -->
        document.getElementById("ifr-psetf").style.display="inline";
-       document.getElementById("Alarms").style.display="none";
        document.getElementById("ifr-nox509").style.display="none";
        <!-- document.getElementById("pS-collector").style.visibility="visible"; -->
        document.getElementById("Ingest").style.visibility="visible";
