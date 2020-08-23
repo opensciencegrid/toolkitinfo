@@ -460,27 +460,6 @@ Web links for <b><?php echo htmlspecialchars($_GET[toolkits]); ?><b><br>
        document.getElementById("ifr-psetf").style.display="inline";
        document.getElementById("ifr-nox509").style.display="none";
        <!-- document.getElementById("pS-collector").style.visibility="visible"; -->
-       document.getElementById("Ingest").style.visibility="visible";
-       document.getElementById("ITB-mon").style.visibility="visible";
-       document.getElementById("Prod-mon").style.visibility="visible";
-       document.getElementById("PL-alarm").style.visibility="visible";
-       document.getElementById("PL-overview").style.visibility="visible";
-       document.getElementById("PL-topN").style.visibility="visible";
-       document.getElementById("OSG-net-docs").style.visibility="visible";
-       document.getElementById("pS-docs").style.visibility="visible";
-       document.getElementById("ES-Fasterdata").style.visibility="visible";
-       document.getElementById("ES-trouble").style.visibility="visible";
-       document.getElementById("MaDDash").style.visibility="visible";
-       document.getElementById("pSConfig").style.visibility="visible";
-       document.getElementById("psetf").style.visibility="visible";
-       document.getElementById("WLCG-grafana").style.visibility="visible";
-       document.getElementById("OSG-ELK-Analytics").style.visibility="visible";
-       document.getElementById("pS-infrastructure").style.visibility="visible";
-       document.getElementById("pS-Overview-PL").style.visibility="visible";
-       document.getElementById("SAND").style.visibility="visible";
-       document.getElementById("MEPHI-tr").style.visibility="visible";
-       document.getElementById("cl-avail").style.visibility="visible";
-       document.getElementById("cl-checkmk").style.visibility="visible";
      }
 </script>
 <script>
