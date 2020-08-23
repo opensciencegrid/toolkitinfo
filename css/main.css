@@ -215,7 +215,7 @@ box-sizing: border-box; /* added - this change the way padding is applied, so it
 
 /*Dropdowns for Tabs with Links*/
 .dropdown {
-  float: left;
+  float: center;
   overflow: hidden;
 }
 
