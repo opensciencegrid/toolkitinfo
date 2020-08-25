@@ -167,7 +167,8 @@ nav {
   overflow: hidden;
   background-color: #DBE2EF;
   font-family: Arial, Helvetica, sans-serif;
-  padding-top: 100px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .navbar a {
