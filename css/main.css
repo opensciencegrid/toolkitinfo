@@ -259,6 +259,8 @@ box-sizing: border-box; /* added - this change the way padding is applied, so it
 
 .dropdown-content a:hover {
   background-color: #ddd;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .show {
