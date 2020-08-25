@@ -135,7 +135,6 @@ nav {
        padding: 10px;
        text-align: center;
        color: black;
-       verticle-align: middle;
 }
 
 * {
@@ -171,7 +170,7 @@ nav {
 }
 
 .navbar a {
-  display: table;
+  float: none;
   font-size: 16px;
   color: white;
   text-align: center;
@@ -217,9 +216,9 @@ box-sizing: border-box; /* added - this change the way padding is applied, so it
 
 /*Dropdowns for Tabs with Links*/
 .dropdown {
-  float: none;
+  padding:0;
   overflow: hidden;
-  left 25%;
+  test-align: center;
 }
 
 .dropdown .dropbtn {
