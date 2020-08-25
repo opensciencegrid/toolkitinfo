@@ -135,6 +135,7 @@ nav {
        padding: 10px;
        text-align: center;
        color: black;
+       verticle-align: middle;
 }
 
 * {
@@ -170,7 +171,7 @@ nav {
 }
 
 .navbar a {
-  float: none;
+  display: table;;
   font-size: 16px;
   color: white;
   text-align: center;
