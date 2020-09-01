@@ -383,7 +383,6 @@
  </div>
 
  <div>
-	Real Client ID is:
 	<?php
 	 function getUserIpAddr(){
             if(!empty($_SERVER['HTTP_CLIENT_IP'])){
