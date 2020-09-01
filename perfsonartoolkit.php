@@ -383,7 +383,7 @@
  </div>
 
  <div>
-   <textarea id="iptest>
+	Real Client ID is:
 	<?php
 	 function getUserIpAddr(){
             if(!empty($_SERVER['HTTP_CLIENT_IP'])){
@@ -400,7 +400,6 @@
 
         echo 'User Real IP - '.getUserIpAddr();
        ?>
-   </textarea>
  </div>
 
  <div id="custom-links" style="margin-left: 10px;vertical-align: top;display: none">
