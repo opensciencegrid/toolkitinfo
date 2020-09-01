@@ -382,6 +382,27 @@
    </textarea>	
  </div>
 
+ <div>
+   <textarea id="iptest>
+	<?php
+	 function getUserIpAddr(){
+            if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+               //ip from share internet
+               $ip = $_SERVER['HTTP_CLIENT_IP'];
+            }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+               //ip pass from proxy
+               $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+            }else{
+               $ip = $_SERVER['REMOTE_ADDR'];
+            }
+            return $ip;
+         }
+
+        echo 'User Real IP - '.getUserIpAddr();
+       ?>
+   </textarea>
+ </div>
+
  <div id="custom-links" style="margin-left: 10px;vertical-align: top;display: none">
 Web links for <b><?php echo htmlspecialchars($_GET[toolkits]); ?><b><br>
 
