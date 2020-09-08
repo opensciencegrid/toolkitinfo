@@ -396,6 +396,29 @@
    ?>
  </div>
 
+ <div>
+  <?php
+    function distance($lat1,$lon1,$lat2,$lon2) {
+     if (($lat1 == $lat2) && ($lon1 == $lon2)) {
+       return 0;
+     }
+     else {
+        $theta = $lon1-$long2;
+	$dist = sin(deg2rad($lat1))*sin(deg2rad($lat2))+cos(deg2rad($lat1)*cos(deg2rad($lat2))
+	$dist = acos($dist)
+	$dist = rad2ged($dist)
+	$miles = $dist*60*1.1515
+     }
+  ?>
+ </div>
+ 
+ <div>
+  <?php
+    echo 'Distance from user to Boston University is ' distance($lat,$long,42.3451,-71.0993)
+  ?>
+ </div>
+
+
  <div id="custom-links" style="margin-left: 10px;vertical-align: top;display: none">
 Web links for <b><?php echo htmlspecialchars($_GET[toolkits]); ?><b><br>
 
