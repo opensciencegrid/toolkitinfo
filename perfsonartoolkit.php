@@ -409,6 +409,7 @@
 	$dist = rad2ged($dist)
 	$miles = $dist*60*1.1515
      }
+    }
   ?>
  </div>
  
