@@ -414,7 +414,7 @@
  
  <div>
   <?php
-    echo 'Distance from user to Boston University is ' distance($lat,$long,42.3451,-71.0993)
+    echo 'Distance from user to Boston University is ' .distance($lat,$long,42.3451,-71.0993);
   ?>
  </div>
 
