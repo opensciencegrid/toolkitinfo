@@ -383,24 +383,6 @@
  </div>
 
  <div>
-	<?php
-	 function getUserIpAddr(){
-            if(!empty($_SERVER['HTTP_CLIENT_IP'])){
-               //ip from share internet
-               $ip = $_SERVER['HTTP_CLIENT_IP'];
-            }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
-               //ip pass from proxy
-               $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-            }else{
-               $ip = $_SERVER['REMOTE_ADDR'];
-            }
-            return $ip;
-         }
-
-        echo 'User Real IP - '.getUserIpAddr();
-       ?>
- </div>
- <div>
    <?php
      $ip_addr = $_SERVER['REMOTE_ADDR'];
      $geoplugin = unserialize( file_get_contents('http://www.geoplugin.net/php.gp?ip='.$ip_addr) );
@@ -410,12 +392,7 @@
      $lat = $geoplugin['geoplugin_latitude'];
      $long = $geoplugin['geoplugin_longitude'];
      }
-     echo $ip_addr.';'.$lat.';'.$long;
-   ?>
- </div>
- <div>
-   <?php
-     echo 'User IP is'.$ip_addr.' User Latitude is '.$lat.' User Longitude is '.$long;
+     echo 'User IP is '.$ip_addr.' User Latitude is '.$lat.' User Longitude is '.$long;
    ?>
  </div>
 
