@@ -410,15 +410,10 @@
 	$miles = $dist*60*1.1515
      }
     }
+    echo distance(32.9697, -96.80322, 29.46786, -98.53506);
   ?>
  </div>
  
- <div>
-  <?php
-    echo distance($lat,$long,42.3451,-71.0993);
-  ?>
- </div>
-
 
  <div id="custom-links" style="margin-left: 10px;vertical-align: top;display: none">
 Web links for <b><?php echo htmlspecialchars($_GET[toolkits]); ?><b><br>
