@@ -392,7 +392,9 @@
      $lat = $geoplugin['geoplugin_latitude'];
      $long = $geoplugin['geoplugin_longitude'];
      }
-     echo 'User IP is '.$ip_addr.' User Latitude is '.$lat.' User Longitude is '.$long;
+     echo 'User IP is: '.$ip_addr;
+     echo 'User Latitude is: '.$lat;
+     echo 'User Longitude is: '.$long;
    ?>
  </div>
 
@@ -424,7 +426,7 @@
 
  <div>
   <?php
-   echo "Distance between user and Boston Univserity is" . distance($lat, $long, 42.3451, -71.0993, "M") . " Miles<br>";
+   echo "Distance between user and Boston Univserity is: " . distance($lat, $long, 42.3451, -71.0993, "M") . " Miles<br>";
   ?>
  </div> 
 
