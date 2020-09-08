@@ -392,9 +392,9 @@
      $lat = $geoplugin['geoplugin_latitude'];
      $long = $geoplugin['geoplugin_longitude'];
      }
-     echo 'User IP is: '.$ip_addr;
-     echo 'User Latitude is: '.$lat;
-     echo 'User Longitude is: '.$long;
+     echo 'User IP is: '.$ip_addr. '<br>';
+     echo 'User Latitude is: '.$lat. '<br>';
+     echo 'User Longitude is: '.$long. '<br>';
    ?>
  </div>
 
