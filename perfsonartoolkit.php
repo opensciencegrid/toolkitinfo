@@ -424,7 +424,7 @@
 
  <div>
   <?php
-   echo "Distance between user and Boston is" . distance($lat, $long, 29.46786, -98.53506, "M") . " Miles<br>";
+   echo "Distance between user and Boston Univserity is" . distance($lat, $long, 42.3451, -71.0993, "M") . " Miles<br>";
   ?>
  </div> 
 
