@@ -440,7 +440,7 @@
     foreach($data)
      {
       $data[4] = $calculated_distance;
-    }
+     }
    }
    echo ");";
    print_r($csv)
