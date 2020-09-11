@@ -426,14 +426,7 @@
 
  <div>
   <?php
-   echo "Distance between user and Boston Univserity is: " . distance($lat, $long, 42.3451, -71.0993, "M") . " Miles<br>";
-  ?>
- </div> 
-
- <div>
-  <?php
    $csv = array_map('str_getcsv', file('test_query_data.csv'));
-   echo "Distance between User and Following Sites is: (<br>";
    foreach($csv as $location => $data)
    {
     $calculated_distance = distance($lat,$long,$data[0],$data[1],"M");
@@ -443,7 +436,7 @@
    }
    $sorting = array_column($distance_array,'distance');
    array_multisort($sorting, SORT_ASC, $distance_array);
-   print_r($distance_array)
+   echo "The distance to host_name: " .$distance_array[host_name]. " at site: " .$distance_array[site_name]. " is " .$distance_array[distance]. "Miles";
   ?>
  </div>
 
