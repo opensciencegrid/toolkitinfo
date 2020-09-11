@@ -437,7 +437,7 @@
    foreach($csv as $location => $data)
    {
     $calculated_distance = distance($lat,$long,$data[0],$data[1],"M");
-    $data[4] = $calculated_distance;
+    $csv[][4] = $calculated_distance;
    }
    echo ");";
    print_r($csv)
