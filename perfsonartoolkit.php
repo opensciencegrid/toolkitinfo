@@ -439,9 +439,10 @@
     $calculated_distance = distance($lat,$long,$data[0],$data[1],"M");
     $distance_array[$location][0] = $calculated_distance;
     $distance_array[$location][1] = $data[2];
-    $distanec_array[$location][2] = $data[3];
+    $distance_array[$location][2] = $data[3];
    }
-   sort($distance_array[][0]);
+   $sorting = array_column($distance_array,$distance_array[][0]);
+   array_multisort($sorting, SORT_ASC, $distance_array);
    print_r($distance_array)
   ?>
  </div>
