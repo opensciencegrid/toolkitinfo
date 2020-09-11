@@ -441,6 +441,7 @@
     echo ' "longitude" => "' . $data[1] . '", ';
     echo ' "host name" => "' . $data[2] . '", ';
     echo ' "site name" => "' . $data[3] . '", ';
+    echo ' "distance" => "' . distance($lat,$long,$data[0],$data[1],"M") . ' Miles", ';
     echo " ),<br>";
    }
    echo ");";
