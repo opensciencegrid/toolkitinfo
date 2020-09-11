@@ -441,7 +441,7 @@
     $distance_array[$location][1] = $data[2];
     $distanec_array[$location][2] = $data[3];
    }
-   asort($distance_array[][0]);
+   sort($distance_array[][0]);
    print_r($distance_array)
   ?>
  </div>
