@@ -437,6 +437,7 @@
    foreach($csv as $location => $data)
    {
     array_push($csv,distance($lat,$long,$data[0],$data[1],"M"));
+    print_r($csv);
     echo ' "host name" => "' . $data[2] . '", ';
     echo ' "distance" => "' . $data[4] . '", ';
     echo " ),<br>";
