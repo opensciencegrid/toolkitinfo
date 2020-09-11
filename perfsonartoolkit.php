@@ -436,11 +436,12 @@
    }
    $sorting = array_column($distance_array,'distance');
    array_multisort($sorting, SORT_ASC, $distance_array);
-   foreach($distance_array as $location => $data)
-   {
-    $echo 'Distance is: ' .$data[0];
-   }
-  ?>
+   echo "<pre>";
+   echo "Distance (Miles)\t Hostname \t Site Name";
+   foreach ( $distance_array as $var ) {
+    echo "\n", $var['distance'], "\t\t", $var['host_name'], "\t\t" $var['site_name'];
+   } 
+ ?>
  </div>
 
 
