@@ -433,7 +433,7 @@
  <div>
   <?php
    $csv = array_map('str_getcsv', file('test_query_data.csv'));
-   echo "Distance between User and Folliwing Sites is: (<br>";
+   echo "Distance between User and Following Sites is: (<br>";
    foreach($csv as $location => $data)
    {
     $calculated_distance = distance($lat,$long,$data[0],$data[1],"M");
@@ -441,6 +441,7 @@
     $distance_array[$location][1] = $data[2];
     $distanec_array[$location][2] = $data[3];
    }
+   asort($distance_array[][0]);
    print_r($distance_array)
   ?>
  </div>
