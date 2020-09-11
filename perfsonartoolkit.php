@@ -438,7 +438,7 @@
    array_multisort($sorting, SORT_ASC, $distance_array);
    foreach($distance_array as $nlocation => $ndata)
    {
-    echo "The distance to host_name: " .$distance_array[host_name]. " at site: " .$distance_array[site_name]. " is " .$distance_array[distance]. "Miles";
+    echo "The distance to host_name: " .$ndata[0]. " at site: " .$ndata[1]. " is " .$ndata[2]. "Miles";
    }
   ?>
  </div>
