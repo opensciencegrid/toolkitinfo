@@ -436,8 +436,9 @@
    echo "Distance between User and Folliwing Sites is: (<br>";
    foreach($csv as $location => $data)
    {
+    array_push($csv,distance($lat,$long,$data[0],$data[1],"M"));
     echo ' "host name" => "' . $data[2] . '", ';
-    echo ' "distance" => "' . distance($lat,$long,$data[0],$data[1],"M") . ' Miles", ';
+    echo ' "distance" => "' . $data[4] . '", ';
     echo " ),<br>";
    }
    echo ");";
