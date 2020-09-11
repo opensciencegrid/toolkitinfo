@@ -433,14 +433,10 @@
  <div>
   <?php
    $csv = array_map('str_getcsv', file('test_query_data.csv'));
-   echo "<br> array (<br>";
+   echo "Distance between User and Folliwing Sites is: (<br>";
    foreach($csv as $location => $data)
    {
-    echo " array(<br>";
-    echo ' "latitude" => "' . $data[0] . '", ';
-    echo ' "longitude" => "' . $data[1] . '", ';
     echo ' "host name" => "' . $data[2] . '", ';
-    echo ' "site name" => "' . $data[3] . '", ';
     echo ' "distance" => "' . distance($lat,$long,$data[0],$data[1],"M") . ' Miles", ';
     echo " ),<br>";
    }
