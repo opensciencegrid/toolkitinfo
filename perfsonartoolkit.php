@@ -441,6 +441,8 @@
     $distance_array[$location][host_name] = $data[2];
     $distance_array[$location][site_name] = $data[3];
    }
+   $sorting = array_column($distance_array,'distance');
+   array_multisort($sorting, SORT_ASC, $distance_array);
    print_r($distance_array)
   ?>
  </div>
