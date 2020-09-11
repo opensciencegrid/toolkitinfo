@@ -440,15 +440,6 @@
   ?>
  </div>
 
- <div>
-  <?php
-   echo "<pre>";
-   echo "Distance (Miles)\t Hostname \t Site Name";
-   foreach ( $distance_array as $var ) {
-    echo "\n", $var['distance'], "\t\t", $var['host_name'], "\t\t" $var['site_name'];
-   } 
-  ?>
- </div>
 
  <div id="custom-links" style="margin-left: 10px;vertical-align: top;display: none">
 Web links for <b><?php echo htmlspecialchars($_GET[toolkits]); ?><b><br>
