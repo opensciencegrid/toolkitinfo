@@ -430,6 +430,24 @@
   ?>
  </div> 
 
+ <div>
+  <?php
+   $csv = array_map('str_getcsv', file('test_query_data.csv'));
+   
+   echo "array (<br>";
+   foreach($csv as $location => $data)
+   {
+    echo " array(<br>";
+    echo ' "latitude" => "' . $data[1] / '",<br>';
+    echo ' "longitude" => "' . $data[2] / '",<br>';
+    echo ' "host name" => "' . $data[3] / '",<br>';
+    echo ' "site name" => "' . $data[4] / '",<br>';
+    echo " ),<br>";
+   }
+   echo ");";
+  ?>
+ </div>
+
  <div id="custom-links" style="margin-left: 10px;vertical-align: top;display: none">
 Web links for <b><?php echo htmlspecialchars($_GET[toolkits]); ?><b><br>
 
