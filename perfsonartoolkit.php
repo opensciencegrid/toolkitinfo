@@ -436,7 +436,7 @@
    }
    $sorting = array_column($distance_array,'distance');
    array_multisort($sorting, SORT_ASC, $distance_array);
-   print_r(distance_array)
+   print_r($distance_array)
   ?>
  </div>
 
