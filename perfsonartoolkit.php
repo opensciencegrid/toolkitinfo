@@ -433,20 +433,34 @@
  <div>
   <?php
    $csv = array_map('str_getcsv', file('test_query_data.csv'));
-   print_r($csv);
    echo "<br> array (<br>";
    foreach($csv as $location => $data)
    {
     echo " array(<br>";
-    echo ' "latitude" => "' . $data[0] . '",<br>';
-    echo ' "longitude" => "' . $data[1] . '",<br>';
-    echo ' "host name" => "' . $data[2] . '",<br>';
-    echo ' "site name" => "' . $data[3] . '",<br>';
+    echo ' "latitude" => "' . $data[0] . '", ';
+    echo ' "longitude" => "' . $data[1] . '", ';
+    echo ' "host name" => "' . $data[2] . '", ';
+    echo ' "site name" => "' . $data[3] . '", ';
     echo " ),<br>";
    }
    echo ");";
   ?>
  </div>
+
+ <div>
+  <?php
+   echo "The distance between the user's IP of <br>";
+   echo $ip_addr . " at geoip locations of<br>";
+   echo $lat . " latitude and " . $long . " longtitude<br>";
+   echo "for each of the following sites is<br>"
+   foreach($csv as $location => $data)
+   {
+    echo "hostname" . $data[2] . "<br>";
+    echo "is" . distance($lat,$long,$data[0],$data[1],"M") . "Miles away<br>";
+   }
+  ?>
+ </div>
+
 
  <div id="custom-links" style="margin-left: 10px;vertical-align: top;display: none">
 Web links for <b><?php echo htmlspecialchars($_GET[toolkits]); ?><b><br>
