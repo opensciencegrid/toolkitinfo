@@ -437,11 +437,10 @@
    foreach($csv as $location => $data)
    {
     $calculated_distance = distance($lat,$long,$data[0],$data[1],"M");
-    $distance_array[][0] = $calculated_distance;
-    $distance_array[][1] = $data[2];
-    $distanec_array[][2] = $data[3];
+    $distance_array[0] = $calculated_distance;
+    $distance_array[1] = $data[2];
+    $distanec_array[2] = $data[3];
    }
-   echo ");";
    print_r($distance_array)
   ?>
  </div>
