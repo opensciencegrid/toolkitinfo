@@ -427,6 +427,7 @@
  <div>
   <?php
    $csv = array_map('str_getcsv', file('test_query_data.csv'));
+   print_r($csv);
    foreach($csv as $location => $data)
    {
     $calculated_distance = distance($lat,$long,$data[0],$data[1],"M");
@@ -438,7 +439,6 @@
    array_multisort($sorting, SORT_ASC, $distance_array);
    print_r($distance_array)
   ?>
-  <br>
  </div>
 
 
