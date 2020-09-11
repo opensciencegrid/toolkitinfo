@@ -438,10 +438,10 @@
    foreach($csv as $location => $data)
    {
     echo " array(<br>";
-    echo ' "latitude" => "' . $data[1] / '",<br>';
-    echo ' "longitude" => "' . $data[2] / '",<br>';
-    echo ' "host name" => "' . $data[3] / '",<br>';
-    echo ' "site name" => "' . $data[4] / '",<br>';
+    echo ' "latitude" => "' . $data[1] . '",<br>';
+    echo ' "longitude" => "' . $data[2] . '",<br>';
+    echo ' "host name" => "' . $data[3] . '",<br>';
+    echo ' "site name" => "' . $data[4] . '",<br>';
     echo " ),<br>";
    }
    echo ");";
