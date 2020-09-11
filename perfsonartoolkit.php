@@ -433,7 +433,7 @@
  <div>
   <?php
    $csv = array_map('str_getcsv', file('test_query_data.csv'));
-   
+   echo $csv. "<br>";
    echo "array (<br>";
    foreach($csv as $location => $data)
    {
