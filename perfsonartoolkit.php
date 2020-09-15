@@ -479,7 +479,7 @@
  <div>
   <?php
   foreach($distance_array as $array) {
-   echo 'Host_name: ' .$array['host_name']. ' is ' .$array['distance']. ' miles away at site' .$array['site_name']. ' <br>';
+   echo 'Host_name: ' .$array['host_name']. ' is ' .$array['distance']. ' miles away at site ' .$array['site_name']. ' <br>';
   }
   ?>
  </div>
