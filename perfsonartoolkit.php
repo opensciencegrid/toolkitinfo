@@ -113,8 +113,8 @@
  <label for="toolkitdistance" style="color:black">Select Toolkit Based on Distance (Closest To): </label>
  <select id="toolkitdistance" name="toolkitdistance">
    <?php
-    foreach($csv as $location => $data) { ?>
-     <option value= "<?php $distance_array[$location][host_name]?>"><?php $distance_array[$location][host_name]?></option>
+    foreach($distance_array as $distance_array) { ?>
+     <option value= "<?php $distance_array[host_name] ?>"><?php $distance_array[host_name] ?></option>
    <?php> 
     }?>
  </select>
