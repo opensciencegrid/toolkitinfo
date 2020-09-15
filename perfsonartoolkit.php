@@ -110,12 +110,12 @@
 
 <div class="form">
  <form action="/developertoolkitinfo/perfsonartoolkit.php" method="get">
- <label for="toolkits" style="color:black">Select Toolkit Based on Distance (Closest To): <input list"toolkits" name="toolkits" type="text"></label>
- <input type="submit" value="Submit">
-  <datalist id="toolkits">
+ <label for="toolkitdistance" style="color:black">Select Toolkit Based on Distance (Closest To): <input list"toolkitdistance" name="toolkitdistance" type="text"></label>
+ <select id="toolkitdistance" name="toolkitdistance">
    <option value = ''></option>
-   <option value= test option>test option</option>
-  </datalist>
+   <option value= "test option">test option</option>
+ </select>
+ <input type="submit" value='Submit'>
  </form>
 </div>
 
