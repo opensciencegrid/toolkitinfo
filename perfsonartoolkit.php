@@ -129,9 +129,11 @@
  <select id="site" name="site">
   <option value = ''></option>
    <?php
-    foreach($distance_array as $array) { ?>
-     <option value= "<?php echo $array['site_name']; ?>"><?php echo $array['site_name']; ?></option>
+    foreach($distance_array as $array) { 
+     if (strlen($array['site_name']) > 0 { ?>
+      <option value= "<?php echo $array['site_name']; ?>"><?php echo $array['site_name']; ?></option>
    <?php
+     } 
     }?>
  </select>
  <input type="submit" value='Submit'>
