@@ -114,7 +114,7 @@
  <input type="submit" value="Submit">
   <datalist id="toolkitsdistance">
    <option value = ''></option>
-   <option value= test option></option>
+   <option value= test option>test option</option>
   </datalist>
  </form>
 </div>
