@@ -114,7 +114,8 @@
  <select id="host" name="host">
   <option value = ''></option>
    <?php
-    foreach($distance_array as $array) { ?>
+    foreach($distance_array as $array) { 
+     $array = array_filter($array,'strlen'); ?>
      <option value= "<?php echo $array['host_name']; ?>"><?php echo $array['host_name']; ?></option>
    <?php
     }?>
@@ -479,7 +480,7 @@
  <div>
   <?php
   foreach($distance_array as $array) {
-   echo 'Host_name: ' .$array['host_name']. 'is ' .$array['distance']. 'miles away <br>';
+   echo 'Host_name: ' .$array['host_name']. ' is ' .$array['distance']. ' miles away <br>';
   }
   ?>
  </div>
