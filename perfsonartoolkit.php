@@ -129,8 +129,8 @@
  <select id="site" name="site">
   <option value = ''></option>
    <?php
-    $noempty = array_filter($distance_array['site_name']);
-    foreach($noempty as $array) { ?>
+    foreach($distance_array as $array) {
+     $array = array_filter($array['site_name']) ?>
      <option value= "<?php echo $array['site_name']; ?>"><?php echo $array['site_name']; ?></option>
    <?php
     }?>
