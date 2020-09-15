@@ -114,7 +114,7 @@
  <select id="host" name="host">
   <option value = ''></option>
    <?php
-    foreach($distance_array as $array) { 
+    foreach($distance_array as $array) { ?>
      <option value= "<?php echo $array['host_name']; ?>"><?php echo $array['host_name']; ?></option>
    <?php
     }?>
