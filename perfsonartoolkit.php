@@ -114,7 +114,7 @@
  <select id="toolkitdistance" name="toolkitdistance">
    <?php
     foreach($csv as $location => $data) { ?>
-     <option value="<?php= $distance_array[$location][host_name]?>"><?php= $distance_array[$location][host_name]?></option>
+     <option value= "<?php $distance_array[$location][host_name]?>"><?php $distance_array[$location][host_name]?></option>
    <?php> 
     }?>
  </select>
