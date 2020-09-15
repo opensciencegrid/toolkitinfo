@@ -45,6 +45,59 @@
 
 <nav>
 
+ <div>
+  <?php
+    $ip_addr = $_SERVER['REMOTE_ADDR'];
+    $geoplugin = unserialize( file_get_contents('http://www.geoplugin.net/php.gp?ip='.$ip_addr) );
+
+    if ( is_numeric($geoplugin['geoplugin_latitude']) && is_numeric($geoplugin['geoplugin_longitude']) ) {
+
+    $lat = $geoplugin['geoplugin_latitude'];
+    $long = $geoplugin['geoplugin_longitude'];
+    }
+  ?>
+ </div>
+ <div>
+  <?php
+    function distance($lat1, $lon1, $lat2, $lon2, $unit) {
+      if (($lat1 == $lat2) && ($lon1 == $lon2)) {
+        return 0;
+      }
+      else {
+        $theta = $lon1 - $lon2;
+        $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+        $dist = acos($dist);
+        $dist = rad2deg($dist);
+        $miles = $dist * 60 * 1.1515;
+        $unit = strtoupper($unit);
+
+        if ($unit == "K") {
+         return ($miles * 1.609344);
+        } else if ($unit == "N") {
+         return ($miles * 0.8684);
+        } else {
+         return $miles;
+        }
+      }
+    }
+  ?>
+ </div>
+ <div>
+  <?php
+   $csv = array_map('str_getcsv', file('test_query_data.csv'));
+   foreach($csv as $location => $data)
+   {
+    $calculated_distance = distance($lat,$long,$data[0],$data[1],"M");
+    $distance_array[$location][distance] = $calculated_distance;
+    $distance_array[$location][host_name] = $data[2];
+    $distance_array[$location][site_name] = $data[3];
+   }
+   $sorting = array_column($distance_array,'distance');
+   array_multisort($sorting, SORT_ASC, $distance_array);
+  ?>
+ <?div>
+
+
 <div class="navbar">
   <div class="dropdown">
     <a href="index.html"><button class="dropbtn">Main Page</button></a>
@@ -381,17 +434,9 @@
         and are removed from this page and its menus.
    </textarea>	
  </div>
-
+ 
  <div>
-   <?php
-     $ip_addr = $_SERVER['REMOTE_ADDR'];
-     $geoplugin = unserialize( file_get_contents('http://www.geoplugin.net/php.gp?ip='.$ip_addr) );
-
-     if ( is_numeric($geoplugin['geoplugin_latitude']) && is_numeric($geoplugin['geoplugin_longitude']) ) {
-
-     $lat = $geoplugin['geoplugin_latitude'];
-     $long = $geoplugin['geoplugin_longitude'];
-     }
+  <?php
      echo 'User IP is: '.$ip_addr. '<br>';
      echo 'User Latitude is: '.$lat. '<br>';
      echo 'User Longitude is: '.$long. '<br>';
@@ -400,42 +445,6 @@
 
  <div>
   <?php
-    function distance($lat1, $lon1, $lat2, $lon2, $unit) {
-      if (($lat1 == $lat2) && ($lon1 == $lon2)) {
-        return 0;
-      }
-      else {
-        $theta = $lon1 - $lon2;
-        $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
-        $dist = acos($dist);
-        $dist = rad2deg($dist);
-        $miles = $dist * 60 * 1.1515;
-        $unit = strtoupper($unit);
-
-        if ($unit == "K") {
-         return ($miles * 1.609344);
-        } else if ($unit == "N") {
-         return ($miles * 0.8684);
-        } else {
-         return $miles;
-        }
-      }
-    }
-  ?>
- </div>
-
- <div>
-  <?php
-   $csv = array_map('str_getcsv', file('test_query_data.csv'));
-   foreach($csv as $location => $data)
-   {
-    $calculated_distance = distance($lat,$long,$data[0],$data[1],"M");
-    $distance_array[$location][distance] = $calculated_distance;
-    $distance_array[$location][host_name] = $data[2];
-    $distance_array[$location][site_name] = $data[3];
-   }
-   $sorting = array_column($distance_array,'distance');
-   array_multisort($sorting, SORT_ASC, $distance_array);
    print_r($distance_array)
   ?>
  </div>
