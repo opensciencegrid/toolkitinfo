@@ -112,6 +112,7 @@
  <form action="/developertoolkitinfo/perfsonartoolkit.php" method="get">
  <label for="toolkitdistance" style="color:black">Select Toolkit Based on Distance (Closest To): </label>
  <select id="toolkitdistance" name="toolkitdistance">
+  <option value = ''>Choose a Hole Based on Distance</option>
    <?php
     foreach($distance_array as $array) { ?>
      <option value= "<?php echo $array['host_name']; ?>"><?php echo $array['host_name']; ?></option>
