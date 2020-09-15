@@ -447,7 +447,7 @@
  <div>
   <?php
   foreach($distance_array as $array) {
-   echo $array['host_name'];
+   echo 'Host_name: ' .$array['host_name']. 'is ' .$array['distance']. 'miles away <br>';
   }
   ?>
  </div>
