@@ -108,7 +108,7 @@
     <a href="perfsonartoolkit.php"><button class="dropbtn">Toolkit Specific Page</button></a>
   </div>
 
-<div class="form">
+<!--<div class="form">>
  <form action="/developertoolkitinfo/perfsonartoolkit.php" method="get">
  <label for="toolkitdistance" style="color:black">Select Toolkit Based on Distance (Closest To): </label>
  <select id="toolkitdistance" name="toolkitdistance">
@@ -120,7 +120,7 @@
  </select>
  <input type="submit" value='Submit'>
  </form>
-</div>
+<!</div>-->
 
 
     <div class="form">
