@@ -114,8 +114,8 @@
  <select id="toolkitdistance" name="toolkitdistance">
    <?php
     foreach($distance_array as $array) { ?>
-     <option value= "<?php echo $array['host_name'] ?>"><?php echo $array['host_name'] ?></option>
-   <?php>
+     <option value= "<?php echo $array['host_name']; ?>"><?php echo $array['host_name']; ?></option>
+   <?php
     }?>
  </select>
  <input type="submit" value='Submit'>
