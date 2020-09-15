@@ -113,7 +113,11 @@
  <label for="toolkitdistance" style="color:black">Select Toolkit Based on Distance (Closest To): </label>
  <select id="toolkitdistance" name="toolkitdistance">
    <option value = ''></option>
-   <option value= "test option">test option</option>
+   <?php
+    foreach($csv as $location => $data) { ?>
+     <option value="<?= $distance_array[$location][host_name]?>"><?= $distance_array[$location][host_name]?></option>
+   <?php> 
+    }?>
  </select>
  <input type="submit" value='Submit'>
  </form>
