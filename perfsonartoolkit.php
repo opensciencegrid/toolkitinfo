@@ -446,7 +446,9 @@
 
  <div>
   <?php
-   print_r($distance_array)
+  foreach($distance_array as $array) {
+   echo $array['host_name']
+  }
   ?>
  </div>
 
