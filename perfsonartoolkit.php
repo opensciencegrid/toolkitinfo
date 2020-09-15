@@ -108,21 +108,6 @@
     <a href="perfsonartoolkit.php"><button class="dropbtn">Toolkit Specific Page</button></a>
   </div>
 
-<!--<div class="form">>
- <form action="/developertoolkitinfo/perfsonartoolkit.php" method="get">
- <label for="toolkitdistance" style="color:black">Select Toolkit Based on Distance (Closest To): </label>
- <select id="toolkitdistance" name="toolkitdistance">
-   <?php
-    foreach($distance_array as $distance_array) { ?>
-     <option value= "<?php $distance_array[host_name] ?>"><?php $distance_array[host_name] ?></option>
-   <?php> 
-    }?>
- </select>
- <input type="submit" value='Submit'>
- </form>
-<!</div>-->
-
-
     <div class="form">
       <form action="/toolkitinfo/perfsonartoolkit.php" method="get">
       <label for="toolkits" style="color:black">Select toolkit: <input list="toolkits" name="toolkits" type="text"></label>
