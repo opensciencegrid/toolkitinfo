@@ -130,7 +130,7 @@
   <option value = ''></option>
    <?php
     foreach($distance_array as $array) { 
-     if (strlen($array['site_name']) > 0 { ?>
+     if (!empty($array['site_name'])) { ?>
       <option value= "<?php echo $array['site_name']; ?>"><?php echo $array['site_name']; ?></option>
    <?php
      } 
