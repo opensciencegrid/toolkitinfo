@@ -276,6 +276,7 @@ div.form
 
 form {
     display: inline-block;
+    white-space: nowrap;
     margin-left: 15px;
     width: 70%;
     text-align: left;
