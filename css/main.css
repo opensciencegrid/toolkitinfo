@@ -210,6 +210,18 @@ width: 33.333%;
 box-sizing: border-box; /* added - this change the way padding is applied, so it always stays at 33.33%, regardless of padding */
 }
 
+.dynamics {
+  white-space: nowrap;
+}
+
+.dynamics > div {
+  width: 300px;
+  background: black;
+  border: 3px solid white;
+  height: 20px;
+  display: inline-block;
+}
+
 
 /* added - these are not needed, but make it look nicer */
 .column img {

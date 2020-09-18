@@ -108,36 +108,38 @@
     <a href="perfsonartoolkit.php"><button class="dropbtn">Toolkit Specific Page</button></a>
   </div>
 
-<div class="form">
- <form action="/developertoolkitinfo/perfsonartoolkit.php" method="get">
- <label for="host" style="color:black">Select Host Based on Distance (Closest To): </label>
- <select id="host" name="host">
-  <option value = ''></option>
-   <?php
-    foreach($distance_array as $array) { ?>
-     <option value= "<?php echo $array['host_name']; ?>"><?php echo $array['host_name']; ?></option>
-   <?php
-    }?>
- </select>
- <input type="submit" value='Submit'>
- </form>
-
- <form action="/developertoolkitinfo/perfsonartoolkit.php" method="get">
- <label for="site" style="color:black">Select Site Based on Distance (Closest To): </label>
- <select id="site" name="site">
-  <option value = ''></option>
-   <?php
-    foreach($distance_array as $array) { 
-     if (!empty($array['site_name'])) { ?>
-      <option value= "<?php echo $array['site_name']; ?>"><?php echo $array['site_name']; ?></option>
-   <?php
-     } 
-    }?>
- </select>
- <input type="submit" value='Submit'>
- </form>
+<div class="dynamics">
+ <div>
+  <form action="/developertoolkitinfo/perfsonartoolkit.php" method="get">
+  <label for="host" style="color:black">Select Host Based on Distance (Closest To): </label>
+  <select id="host" name="host">
+   <option value = ''></option>
+    <?php
+     foreach($distance_array as $array) { ?>
+      <option value= "<?php echo $array['host_name']; ?>"><?php echo $array['host_name']; ?></option>
+    <?php
+     }?>
+  </select>
+  <input type="submit" value='Submit'>
+  </form>
+ </div>
+ <div>
+  <form action="/developertoolkitinfo/perfsonartoolkit.php" method="get">
+  <label for="site" style="color:black">Select Site Based on Distance (Closest To): </label>
+  <select id="site" name="site">
+   <option value = ''></option>
+    <?php
+     foreach($distance_array as $array) { 
+      if (!empty($array['site_name'])) { ?>
+       <option value= "<?php echo $array['site_name']; ?>"><?php echo $array['site_name']; ?></option>
+    <?php
+      } 
+     }?>
+  </select>
+  <input type="submit" value='Submit'>
+  </form>
+ </div>
 </div>
-
 
 
     <div class="form">
