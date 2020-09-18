@@ -287,9 +287,10 @@ div.form
 }
 
 form {
-    display: inline-block;
-    white-space: nowrap;
-    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    float: left;
     margin-left: 15px;
     width: 70%;
     padding: 10px 0;
