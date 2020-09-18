@@ -110,7 +110,7 @@
 
 
 
-<div style="display: inline">
+<div class="form" style="display: inline">
  <form action="/developertoolkitinfo/perfsonartoolkit.php" method="get">
  <label for="host" style="color:black">Select Host Based on Distance (Closest To): </label>
  <select id="host" name="host">
