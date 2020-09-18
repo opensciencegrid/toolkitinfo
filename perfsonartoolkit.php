@@ -110,8 +110,8 @@
 
 
 
-<div class="form">
- <form action="/developertoolkitinfo/perfsonartoolkit.php" method="get" style="display: right">
+<div class="form" style="display: right">
+ <form action="/developertoolkitinfo/perfsonartoolkit.php" method="get">
  <label for="host" style="color:black">Select Host Based on Distance (Closest To): </label>
  <select id="host" name="host">
   <option value = ''></option>
