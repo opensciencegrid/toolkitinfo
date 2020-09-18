@@ -289,6 +289,7 @@ div.form
 form {
     display: inline-block;
     white-space: nowrap;
+    float: right;
     margin-left: 15px;
     width: 70%;
     padding: 10px 0;
