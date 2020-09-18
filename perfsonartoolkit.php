@@ -121,9 +121,7 @@
  </select>
  <input type="submit" value='Submit'>
  </form>
-</div>
 
-<div class="form">
  <form action="/developertoolkitinfo/perfsonartoolkit.php" method="get">
  <label for="site" style="color:black">Select Site Based on Distance (Closest To): </label>
  <select id="site" name="site">
