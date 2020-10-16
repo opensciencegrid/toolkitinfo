@@ -178,7 +178,6 @@ nav {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  left: 25%;
 }
 
 .block {
@@ -210,6 +209,12 @@ width: 33.333%;
 box-sizing: border-box; /* added - this change the way padding is applied, so it always stays at 33.33%, regardless of padding */
 }
 
+.colform 
+{
+float:left;
+width:50%;
+}
+
 .dynamics {
   white-space: nowrap;
 }
@@ -231,10 +236,11 @@ box-sizing: border-box; /* added - this change the way padding is applied, so it
 
 /*Dropdowns for Tabs with Links*/
 .dropdown {
-  padding:0;
-  overflow: hidden;
-  test-align: center;
+ padding: 0;
+ overflow: hidden;
+ text-align: center;
 }
+
 
 .dropdown .dropbtn {
   cursor: pointer;
@@ -276,6 +282,7 @@ box-sizing: border-box; /* added - this change the way padding is applied, so it
   padding-bottom: 16px;
 }
 
+
 .show {
   display: block;
 }
@@ -286,13 +293,13 @@ div.form
     text-align: left;
 }
 
-form {
-    display: flex;
+.form {
+    display: inline-block;
     flex-wrap: wrap;
     justify-content: space-between;
     float: left;
     margin-left: 15px;
-    width: 70%;
+    width: 85%;
     padding: 10px 0;
 }
 
