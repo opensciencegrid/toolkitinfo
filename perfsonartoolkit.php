@@ -197,6 +197,7 @@
  <article>
  <div id='custom-links'>
  <h4> You have selected a toolkit host. If any of these issues are prevalent to your problem, please select them and your toolkit host will be both a source and destination </h4>
+ <h4> NOTE: Some hosts may show no data when a link is clicked. This is because the host is for a different type of data. Please select a similar host or different data type </h4>
  <div class='row'>
   <div class='column'>
    <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/82552400-d8cb-11ea-9344-2da4788d78a4?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1d,to:now))&_a=(description:'This%20dashboard%20allows%20for%20the%20user%20to%20select%20both%20the%20source%20host,%20as%20well%20as%20any%20destination%20it%20may%20apply%20to,%20so%20to%20give%20all%20of%20the%20relevant%20information%20about%20the%20given%20parameters.%20This%20dashboard%20primarily%20focuses%20on%20the%20packetloss.',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:'(src_host:<?php echo htmlspecialchars($_GET[host]); ?>%20AND%20dest_host:*)%20OR%20(src_host:*%20AND%20dest_host:<?php echo htmlspecialchars($_GET[host]); ?>)'),timeRestore:!f,title:'Site-Based%20perfsonar%20Packetloss%20Breakdown%20ts-ih',viewMode:view) target='_blank'><button class='block'>Do You Suspect a lot of Packetloss When Transmitting Data to Another Site? </button></a>
@@ -213,7 +214,7 @@
  </div>
  </article>
  <div id='no-cust-text'>
- <div class='row'?
+ <div class='row'>
   <div class='column'>
    <h3> You have not selected a toolkit host yet. Once a host is selected, links will appear that when selected,
       will display the specified data with the host as both a source and a destination. </h3>

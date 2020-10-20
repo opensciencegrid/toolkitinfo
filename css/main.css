@@ -215,6 +215,12 @@ float:left;
 width:50%;
 }
 
+.central
+{
+left: 50%;
+position: fixed;
+}
+
 .dynamics {
   white-space: nowrap;
 }
