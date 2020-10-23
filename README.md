@@ -12,7 +12,7 @@ https://github.com/shearert/toolkitinfoquery. These menus display hosts on the M
 When a host is then selected from either of the dropdowns, dynamic hyperlinks appear that redirect the user to the MWT2 Kibana Dashboards about they data they selected, but also
 include the host from the toolkitingo.opensciencegrid.org/toolkitinfo page both as a source host and a destination host.
 
-INSTALLATION
+# INSTALLATION
 If one wishes to install their own copy of the webpage and Elasticsearch query, there is an included ZIP file for each release, but there are a few notable lines to change
 based on the set up of the machine running it.
 
