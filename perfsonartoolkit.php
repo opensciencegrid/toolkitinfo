@@ -136,7 +136,7 @@
 
  <br> </br>
 
- <form action="/developertoolkitinfo/perfsonartoolkit.php" method="get" class='colform'>
+ <form action="<?php echo '/'. basename(getcwd()) .'/'. basename($_SERVER['PHP_SELF']); ?>" method="get" class='colform'>
  <label for="host" style="color:black; font-size:17px;">Select Host In Alphabetical Order: </label>
  <select id="host" name="host">
   <option value = ''></option>
@@ -151,7 +151,7 @@
  <input type="submit" value='Submit'>
  </form>
 
- <form action="/developertoolkitinfo/perfsonartoolkit.php" method="get" class='colform'>
+ <form action="<?php echo '/'. basename(getcwd()) .'/'. basename($_SERVER['PHP_SELF']); ?>" method="get" class='colform'>
  <label for="host" style="color:black; font-size:17px;">Select Host Based on Distance: </label>
  <select id="host" name="host">
   <option value = ''></option>
@@ -213,6 +213,7 @@
  </div>
  </div>
  </article>
+ </div>
  <div id='no-cust-text'>
  <div class='row'>
   <div class='column'>
