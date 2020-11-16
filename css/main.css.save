@@ -1,0 +1,648 @@
+/*! HTML5 Boilerplate v7.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 1.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+ 
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+
+
+ /* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+body {
+/*	background-image: url("/img/abstract-net-image.jpg"); */
+/*	background-image: url("/img/motion-background.jpg"); */
+        background-position: center;
+        background-size: cover; 
+        background-repeat: no-repeat:
+        background-color: #cc88dd;
+}
+
+article {
+       background-color:  #F9F7F7;
+       padding: 20px;
+       text-align: center;
+       color: black;
+}
+
+header {
+       background-color:  #112D4E;
+       padding: 10px;
+       min-height: 110px;
+       text-align: center;
+       color: white;
+}
+
+footer {
+       background-color:  #112D4E;
+       padding: 20px;
+       vertical-align: middle;
+       text-align: center;
+       color: white;
+}
+
+nav {
+       background-color:  #3F72AF;
+       padding: 10px;
+       text-align: center;
+       color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* 
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+}
+
+.flex-container .box {
+  background-color: #f1f1f1;
+  width: 50%;
+  margin: 10px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 25px;
+} */
+
+.navbar {
+  overflow: hidden;
+  background-color: #DBE2EF;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.navbar a {
+  float: none;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.block {
+  display: block;
+  width: 100%;
+  border: 2px solid #3F72AF;
+  background-color: #DBE2EF;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  color: #112D4E;
+}
+
+.row
+{
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap; /* added - this tells Flex to wrap onto a new line, if there is no space. */
+background-color: #F9F7F7;
+}
+
+.column
+{
+display: inline-block;
+padding: 0.5em;
+display: block;
+width: 33.333%;
+box-sizing: border-box; /* added - this change the way padding is applied, so it always stays at 33.33%, regardless of padding */
+}
+
+.colform 
+{
+float:left;
+width:50%;
+}
+
+.central
+{
+left: 50%;
+position: fixed;
+}
+
+.dynamics {
+  white-space: nowrap;
+}
+
+.dynamics > div {
+  width: 300px;
+  background: black;
+  border: 3px solid white;
+  height: 20px;
+  display: inline-block;
+}
+
+
+/* added - these are not needed, but make it look nicer */
+.column img {
+  object-fit: cover; /* prevents image from stretching */
+  margin-top: 12px;
+}
+
+/*Dropdowns for Tabs with Links*/
+.dropdown {
+ padding: 0;
+ overflow: hidden;
+ text-align: center;
+}
+
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: 2px solid #112D4E;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: #3F72AF;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+
+.show {
+  display: block;
+}
+
+div.form
+{
+    display: block;
+    text-align: left;
+}
+
+.form {
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    float: left;
+    margin-left: 15px;
+    width: 85%;
+    padding: 10px 0;
+}
+
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted blue; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 240px;
+  background-color: grey;
+  color: #fff;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 6px;
+  top: -5px;
+  left: 105%;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+
+
+
+ /* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+ .hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+
+/*
+* Extends the .visuallyhidden class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+  overflow: auto;
+}
+
+ 
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first')m 
+{
+float:left;
+width:50%;
+}
+
+.central
+{
+left: 50%;
+position: fixed;
+}
+
+.dynamics {
+  white-space: nowrap;
+}
+
+.dynamics > div {
+  width: 300px;
+  background: black;
+  border: 3px solid white;
+  height: 20px;
+  display: inline-block;
+}
+
+
+/* added - these are not needed, but make it look nicer */
+.column img {
+  object-fit: cover; /* prevents image from stretching */
+  margin-top: 12px;
+}
+
+/*Dropdowns for Tabs with Links*/
+.dropdown {
+ padding: 0;
+ overflow: hidden;
+ text-align: center;
+}
+
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: 2px solid #112D4E;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: #3F72AF;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+
+.show {
+  display: block;
+}
+
+div.form
+{
+    display: block;
+    text-align: left;
+}
+
+.form {
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    float: left;
+    margin-left: 15px;
+    width: 85%;
+    padding: 10px 0;
+}
+
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted blue; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 240px;
+  background-color: grey;
+  color: #fff;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 6px;
+  top: -5px;
+  left: 105%;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+
+
+
+ /* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+ .hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+
+/*
+* Extends the .visuallyhidden class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+  overflow: auto;
+}
+
+ 
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first')

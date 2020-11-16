@@ -1,3 +1,9 @@
+<?php
+ $cookievar = $_GET[host];
+ $expire = time()+1210000;
+ setcookie("host",$cookievar,$expire);
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -15,6 +21,26 @@
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
+
+  <script src="js/jquery.min.js"></script>
+  <script src="../dist/js/standalone/selectize.js"></script>
+  <script src="js/index.js"></script>
+  <style type="text/css">
+   .selectize-control .option .title {
+	display: block;
+   }
+   .selectize-control .option .url {
+	font-size: 12px;
+	display: block;
+	color: #a0a0a0;
+   }
+   .selectize-control .item a {
+	color: #006ef5;
+   }
+   .selectize-control .item.active a {
+	color: #303030;
+   }
+  </style>
 </head>
 
 <body>
@@ -188,19 +214,63 @@
 <?php
  $search = array_column($distance_array,'host_name');
  $samplehost = $_GET[host];
- $key = array_search($samplehost,$search);
+ function searchingfunc($z,$a) {
+  $key = array_search($z,$a);
+  return $key;
+ }
+ $typekey = searchingfunc($samplehost,$search);
+?>
+
+<?php
+ if(isset($_COOKIE["host"])) {
+  $savedcookie = $_COOKIE["host"];
+ }
+ $cookietype = searchingfunc($savedcookie,$search);
 ?>
 
 
 </div>
+<div id='normhost'>
 <p style="color:white">Your selected perfSONAR Toolkit Host is: <b><?php echo htmlspecialchars($_GET[host]); ?></b></p>
-<p style="color:white">Your selected perfSONAR Toolkit Host is: <b><?php echo $distance_array[$key]['data_type']; ?></b></p>
+<p style="color:white">Your selected perfSONAR Toolkit Host Type is: <b><?php echo $distance_array[$typekey]['data_type']; ?></b></p>
+</div>
+<div id ='cookie'>
+<p style="color:white">The Last perfSONAR Toolkit Host you had selected is: <b><?php echo $savedcookie; ?></b></p>
+<p style="color:white">The Last perfSONAR Toolkit Host type is: <b><?php echo $distance_array[$cookietype]['data_type']; ?></b></p>
+</div>
 <!--
 <p style="color:white">Your selected perfSONAR Toolkit Site is: <b><?php echo htmlspecialchars($_GET[site]); ?></b></p>
 -->
 
 </nav>
  <article>
+
+<!--
+<div>
+ <h2> Test Selectize Dropdown</h2>
+ <input id='selectize'></select>
+ <button class='btn-info'>Submit</button>
+</div>
+
+<script>
+$function() {
+ $('#selectize').selectize({
+  options: [
+   {value: 1, name: 'ALGT2' },
+   {value: 2, name: 'MWT2' },
+   {value: 3, name: 'MSU' },
+  ],
+  labelField: 'name',
+  searchField: ['name']
+  placeholder: 'Enter Site',
+  maxItems: 2,
+  delimiter: ','
+  create: false,
+  openOnFocus: true,
+ });
+};
+</script>
+-->
 
  <div id='both'>
  <h4> You have selected a toolkit host. If any of these issues are prevalent to your problem, please select them and your toolkit host will be both a source and destination </h4>
@@ -325,38 +395,86 @@
 </script>
 <script>
 	var host = "<?php echo htmlspecialchars($_GET[host]); ?>";
+        var cookies = "<?php echo $savedcookie; ?>";
+        var cookiestype = "<?php echo $distance_array[$cookietype]['data_type']; ?>";
 	if ( typeof host === 'undefined' || host === null || host == "") {
-           document.getElementById("no-cust-text").style.display="inline";
-           document.getElementById("both").style.display="none";
-           document.getElementById("latency").style.display="none";
-           document.getElementById("throughput").style.display="none";
-           document.getElementById("neither").style.display="none";
+           if ( typeof cookies === 'undefined' || cookies === null || cookies == "") {
+              document.getElementById("no-cust-text").style.display="inline";
+              document.getElementById("both").style.display="none";
+              document.getElementById("latency").style.display="none";
+              document.getElementById("throughput").style.display="none";
+              document.getElementById("neither").style.display="none";
+              document.getElementById("normhost").style.display="inline";
+              document.getElementById("cookie").style.display="none";
+          } else {
+              if ( cookiestype === 'latency') {
+                 document.getElementById("no-cust-text").style.display="none";
+                 document.getElementById("both").style.display="none";
+                 document.getElementById("latency").style.display="inline";
+                 document.getElementById("throughput").style.display="none";
+                 document.getElementById("neither").style.display="none";
+                 document.getElementById("normhost").style.display="none";
+                 document.getElementById("cookie").style.display="inline";
+              } if ( cookiestype === 'throughput') {
+                 document.getElementById("no-cust-text").style.display="none";
+                 document.getElementById("both").style.display="none";
+                 document.getElementById("latency").style.display="none";
+                 document.getElementById("throughput").style.display="inline";
+                 document.getElementById("neither").style.display="none";
+                 document.getElementById("normhost").style.display="none";
+                 document.getElementById("cookie").style.display="inline";
+              } if ( cookiestype === 'both') {
+                 document.getElementById("no-cust-text").style.display="none";
+                 document.getElementById("both").style.display="inline";
+                 document.getElementById("latency").style.display="none";
+                 document.getElementById("throughput").style.display="none";
+                 document.getElementById("neither").style.display="none";
+                 document.getElementById("normhost").style.display="none";
+                 document.getElementById("cookie").style.display="inline";
+              } if ( cookiestype === 'neither') {
+                 document.getElementById("no-cust-text").style.display="none";
+                 document.getElementById("both").style.display="none";
+                 document.getElementById("latency").style.display="none";
+                 document.getElementById("throughput").style.display="none";
+                 document.getElementById("neither").style.display="inline";
+                 document.getElementById("normhost").style.display="none";
+                 document.getElementById("cookie").style.display="inline";
+              }
+          }
 	} else {
-           var data = "<?php echo $distance_array[$key]['data_type']; ?>";
+           var data = "<?php echo $distance_array[$typekey]['data_type']; ?>";
            if ( data === 'latency') {
               document.getElementById("both").style.display="none";
               document.getElementById("no-cust-text").style.display="none";
               document.getElementById("latency").style.display="inline";
               document.getElementById("throughput").style.display="none";
               document.getElementById("neither").style.display="none";
+              document.getElementById("normhost").style.display="inline";
+              document.getElementById("cookie").style.display="none";
            } if ( data === 'throughput') {
               document.getElementById("both").style.display="none";
               document.getElementById("no-cust-text").style.display="none";
               document.getElementById("latency").style.display="none";
               document.getElementById("throughput").style.display="inline";
               document.getElementById("neither").style.display="none";
+              document.getElementById("normhost").style.display="inline";
+              document.getElementById("cookie").style.display="none";
            } if ( data === 'neither') {
               document.getElementById("both").style.display="none";
               document.getElementById("no-cust-text").style.display="none";
               document.getElementById("latency").style.display="none";
               document.getElementById("throughput").style.display="none";
               document.getElementById("neither").style.display="inline";
+              document.getElementById("normhost").style.display="inline";
+              document.getElementById("cookie").style.display="none";
            } if ( data === 'both') {
               document.getElementById("both").style.display="inline";
               document.getElementById("no-cust-text").style.display="none";
               document.getElementById("latency").style.display="none";
               document.getElementById("throughput").style.display="none";
               document.getElementById("neither").style.display="none";
+              document.getElementById("normhost").style.display="inline";
+              document.getElementById("cookie").style.display="none";
            }
 	}
  </script>
