@@ -22,9 +22,7 @@
 
   <meta name="theme-color" content="#fafafa">
 
-  <script src="js/jquery.min.js"></script>
-  <script src="../dist/js/standalone/selectize.js"></script>
-  <script src="js/index.js"></script>
+  <script import 'selectize/dist/js/standalone/selectize.min.js'; </script>
   <style type="text/css">
    .selectize-control .option .title {
 	display: block;
@@ -50,7 +48,6 @@
 
   <!-- Add your site or application content here -->
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
@@ -231,12 +228,10 @@
 
 </div>
 <div id='normhost'>
-<p style="color:white">Your selected perfSONAR Toolkit Host is: <b><?php echo htmlspecialchars($_GET[host]); ?></b></p>
-<p style="color:white">Your selected perfSONAR Toolkit Host Type is: <b><?php echo $distance_array[$typekey]['data_type']; ?></b></p>
+<p style="color:white">Your selected perfSONAR Toolkit Host is: <b><?php echo htmlspecialchars($_GET[host]); ?> (<?php echo $distance_array[$typekey]['data_type'];?>)</b></p>
 </div>
 <div id ='cookie'>
-<p style="color:white">The Last perfSONAR Toolkit Host you had selected is: <b><?php echo $savedcookie; ?></b></p>
-<p style="color:white">The Last perfSONAR Toolkit Host type is: <b><?php echo $distance_array[$cookietype]['data_type']; ?></b></p>
+<p style="color:white">The Last perfSONAR Toolkit Host you had selected is: <b><?php echo $savedcookie; ?> (<?php echo $distance_array[$cookietype]['data_type'];?>)</b></p>
 </div>
 <!--
 <p style="color:white">Your selected perfSONAR Toolkit Site is: <b><?php echo htmlspecialchars($_GET[site]); ?></b></p>
@@ -245,31 +240,53 @@
 </nav>
  <article>
 
+
 <!--
 <div>
- <h2> Test Selectize Dropdown</h2>
- <input id='selectize'></select>
- <button class='btn-info'>Submit</button>
+ <h1>Selectize.js</h1>
+ <div class="demo">
+  <h2>Customizing Appearance</h2>
+  <p>Render items on your own &amp; apply unique CSS styles.</p>
+  <div class="control-group">
+   <label for="select-links">Links:</label>
+   <select id="select-links" placeholder="Pick some links..."></select>
+  </div>
+  <script>
+  // <select id="select-links"></select>
+  $('#select-links').selectize({
+   theme: 'links',
+   maxItems: null,
+   valueField: 'id',
+   searchField: 'title',
+   options: [
+     {id: 1, title: 'DIY', url: 'https://diy.org'},
+     {id: 2, title: 'Google', url: 'http://google.com'},
+     {id: 3, title: 'Yahoo', url: 'http://yahoo.com'},
+   ],
+   render: {
+    option: function(data, escape) {
+     return '<div class="option">' +
+      '<span class="title">' + escape(data.title) + '</span>' +
+      '<span class="url">' + escape(data.url) + '</span>' +
+     '</div>';
+    },
+    item: function(data, escape) {
+     return '<div class="item"><a href="' + escape(data.url) + '">' + escape(data.title) + '</a></div>';
+    }
+   },
+   create: function(input) {
+    return {
+     id: 0,
+     title: input,
+     url: '#'
+    };
+   }
+  });
+  </script>
+  <p>TODO: explain how to bind events.</p>
+ </div>
 </div>
 
-<script>
-$function() {
- $('#selectize').selectize({
-  options: [
-   {value: 1, name: 'ALGT2' },
-   {value: 2, name: 'MWT2' },
-   {value: 3, name: 'MSU' },
-  ],
-  labelField: 'name',
-  searchField: ['name']
-  placeholder: 'Enter Site',
-  maxItems: 2,
-  delimiter: ','
-  create: false,
-  openOnFocus: true,
- });
-};
-</script>
 -->
 
  <div id='both'>
@@ -328,6 +345,60 @@ $function() {
  <div class='row'>
   <div class='column'>
     <h3> NOTE: The toolkit host you selected is neither a throughput nor latency host. Therefore, no links are displayed. Please choose another toolkit host and contact the owner of the toolkit host for more information</h3>
+  </div>
+ </div>
+ </div>
+
+
+
+
+ <div id='cboth'>
+ <h4> You have selected a toolkit host. If any of these issues are prevalent to your problem, please select them and your toolkit host will be both a source and destination </h4>
+ <h4> NOTE: The toolkit host you selected is both a throughput and latency host. Therefore, all links are displayed </h4>
+ <div class='row'>
+  <div class='column'>
+   <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/82552400-d8cb-11ea-9344-2da4788d78a4?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1d,to:now))&_a=(description:'This%20dashboard%20allows%20for%20the%20user%20to%20select%20both%20the%20source%20host,%20as%20well%20as%20any%20destination%20it%20may%20apply%20to,%20so%20to%20give%20all%20of%20the%20relevant%20information%20about%20the%20given%20parameters.%20This%20dashboard%20primarily%20focuses%20on%20the%20packetloss.',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:'(src_host:<?php echo $savedcookie; ?>%20AND%20dest_host:*)%20OR%20(src_host:*%20AND%20dest_host:<?php echo $savedcookie; ?>)'),timeRestore:!f,title:'Site-Based%20perfsonar%20Packetloss%20Breakdown%20ts-ih',viewMode:view) target='_blank'><button class='block'>Do You Suspect a lot of Packetloss When Transmitting Data to Another Site? </button></a>
+   <br> </br>
+   <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/35976890-d8ca-11ea-9344-2da4788d78a4?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1d,to:now))&_a=(description:'This%20dashboard%20allows%20for%20the%20user%20to%20select%20both%20the%20source%20host,%20as%20well%20as%20any%20destination%20it%20may%20apply%20to,%20so%20to%20give%20all%20of%20the%20relevant%20information%20about%20the%20given%20parameters.%20This%20dashboard%20primarily%20focuses%20on%20the%20trace.',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:'(src_host:<?php echo $savedcookie; ?>%20AND%20dest_host:*)%20OR%20(src_host:*%20AND%20dest_host:<?php echo $savedcookie; ?>)'),timeRestore:!f,title:'Site-Based%20perfsonar%20Trace%20Breakdown%20ts-ih',viewMode:view) target='_blank'><button class='block'>Are You Interested in the Path that Data Takes from your Site to Another?</button></a>
+   <br> </br>
+   <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/a1ce0000-d8d4-11ea-9344-2da4788d78a4?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1d,to:now))&_a=(description:'This%20dashboard%20allows%20for%20the%20user%20to%20select%20both%20the%20source%20host,%20as%20well%20as%20any%20destination%20it%20may%20apply%20to,%20so%20to%20give%20all%20of%20the%20relevant%20information%20about%20the%20given%20parameters.%20This%20dashboard%20primarily%20focuses%20on%20the%20One-Way%20Delay.',filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,index:b1029d00-e61d-11ea-9ef7-e1db34380ad3,key:dest_site,negate:!t,params:(query:IEPSAS-Kosice),type:phrase),query:(match_phrase:(dest_site:IEPSAS-Kosice))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:b1029d00-e61d-11ea-9ef7-e1db34380ad3,key:src_site,negate:!t,params:(query:IEPSAS-Kosice),type:phrase),query:(match_phrase:(src_site:IEPSAS-Kosice)))),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:'(src_host:<?php echo $savedcookie; ?>%20AND%20dest_host:*)%20OR%20(src_host:*%20AND%20dest_host:<?php echo $savedcookie; ?>)'),timeRestore:!f,title:'Site-Based%20perfsonar%20One-Way%20Delay%20Breakdown%20ts-ih',viewMode:view) target='_blank'><button class='block'>Do you Suspect Slow Connections between your Site and Another?</button></a>
+  </div>
+  <div class='column'>
+   <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/57e3c0b0-d7f3-11ea-9344-2da4788d78a4?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1d,to:now))&_a=(description:'This%20dashboard%20allows%20for%20the%20user%20to%20select%20both%20the%20source%20host,%20as%20well%20as%20any%20destination%20it%20may%20apply%20to,%20so%20to%20give%20all%20of%20the%20relevant%20information%20about%20the%20given%20parameters.%20This%20dashboard%20primarily%20focuses%20on%20the%20throughput.',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:'(src_host:<?php echo $savedcookie; ?>%20AND%20dest_host:*)%20OR%20(src_host:*%20AND%20dest_host:<?php echo $savedcookie; ?>)'),timeRestore:!f,title:'Site-Based%20perfsonar%20Throughput%20Breakdown%20ts-ih',viewMode:view) target='_blank'><button class='block'>Are You Seeing a lot of Throughput Issues for your Site?</button></a>
+   <br> </br>
+   <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/68ec3520-d8cc-11ea-9344-2da4788d78a4?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1d,to:now))&_a=(description:'This%20dashboard%20allows%20for%20the%20user%20to%20select%20both%20the%20source%20host,%20as%20well%20as%20any%20destination%20it%20may%20apply%20to,%20so%20to%20give%20all%20of%20the%20relevant%20information%20about%20the%20given%20parameters.%20This%20dashboard%20primarily%20focuses%20on%20the%20retransmits.',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:'(src_host:<?php echo $savedcookie; ?>%20AND%20dest_host:*)%20OR%20(src_host:*%20AND%20dest_host:<?php echo $savedcookie; ?>)'),timeRestore:!f,title:'Site-Based%20perfsonar%20Retransmits%20Breakdown%20ts-ih',viewMode:view) target='_blank'><button class='block'>Are You Seeing a lot of Retransmitted Data for your Site?</button></a>
+  </div>
+ </div>
+ </div>
+
+ <div id='cthroughput'>
+ <h4> You have selected a toolkit host. If any of these issues are prevalent to your problem, please select them and your toolkit host will be both a source and destination </h4>
+ <h4> NOTE: The toolkit host you selected is a throughput host. Therefore, only links regarding throughput are displayed </h4>
+ <div class='row'>
+  <div class='column'>
+   <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/35976890-d8ca-11ea-9344-2da4788d78a4?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1d,to:now))&_a=(description:'This%20dashboard%20allows%20for%20the%20user%20to%20select%20both%20the%20source%20host,%20as%20well%20as%20any%20destination%20it%20may%20apply%20to,%20so%20to%20give%20all%20of%20the%20relevant%20information%20about%20the%20given%20parameters.%20This%20dashboard%20primarily%20focuses%20on%20the%20trace.',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:'(src_host:<?php echo $savedcookie; ?>%20AND%20dest_host:*)%20OR%20(src_host:*%20AND%20dest_host:<?php echo $savedcookie; ?>)'),timeRestore:!f,title:'Site-Based%20perfsonar%20Trace%20Breakdown%20ts-ih',viewMode:view) target='_blank'><button class='block'>Are You Interested in the Path that Data Takes from your Site to Another?</button></a>
+   <br> </br>
+   <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/68ec3520-d8cc-11ea-9344-2da4788d78a4?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1d,to:now))&_a=(description:'This%20dashboard%20allows%20for%20the%20user%20to%20select%20both%20the%20source%20host,%20as%20well%20as%20any%20destination%20it%20may%20apply%20to,%20so%20to%20give%20all%20of%20the%20relevant%20information%20about%20the%20given%20parameters.%20This%20dashboard%20primarily%20focuses%20on%20the%20retransmits.',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:'(src_host:<?php echo $savedcookie; ?>%20AND%20dest_host:*)%20OR%20(src_host:*%20AND%20dest_host:<?php echo $savedcookie; ?>)'),timeRestore:!f,title:'Site-Based%20perfsonar%20Retransmits%20Breakdown%20ts-ih',viewMode:view) target='_blank'><button class='block'>Are You Seeing a lot of Retransmitted Data for your Site?</button></a>
+  </div>
+  <div class='column'>
+   <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/57e3c0b0-d7f3-11ea-9344-2da4788d78a4?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1d,to:now))&_a=(description:'This%20dashboard%20allows%20for%20the%20user%20to%20select%20both%20the%20source%20host,%20as%20well%20as%20any%20destination%20it%20may%20apply%20to,%20so%20to%20give%20all%20of%20the%20relevant%20information%20about%20the%20given%20parameters.%20This%20dashboard%20primarily%20focuses%20on%20the%20throughput.',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:'(src_host:<?php echo $savedcookie; ?>%20AND%20dest_host:*)%20OR%20(src_host:*%20AND%20dest_host:<?php echo $savedcookie; ?>)'),timeRestore:!f,title:'Site-Based%20perfsonar%20Throughput%20Breakdown%20ts-ih',viewMode:view) target='_blank'><button class='block'>Are You Seeing a lot of Throughput Issues for your Site?</button></a>
+   <br> </br>
+  </div>
+ </div>
+ </div>
+
+ <div id='clatency'>
+ <h4> You have selected a toolkit host. If any of these issues are prevalent to your problem, please select them and your toolkit host will be both a source and destination </h4>
+ <h4> NOTE: The toolkit host you selected is a latency host. Therefore, only links regardling latency are displayed </h4>
+ <div class='row'>
+  <div class='column'>
+   <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/82552400-d8cb-11ea-9344-2da4788d78a4?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1d,to:now))&_a=(description:'This%20dashboard%20allows%20for%20the%20user%20to%20select%20both%20the%20source%20host,%20as%20well%20as%20any%20destination%20it%20may%20apply%20to,%20so%20to%20give%20all%20of%20the%20relevant%20information%20about%20the%20given%20parameters.%20This%20dashboard%20primarily%20focuses%20on%20the%20packetloss.',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:'(src_host:<?php echo $savedcookie; ?>%20AND%20dest_host:*)%20OR%20(src_host:*%20AND%20dest_host:<?php echo $savedcookie; ?>)'),timeRestore:!f,title:'Site-Based%20perfsonar%20Packetloss%20Breakdown%20ts-ih',viewMode:view) target='_blank'><button class='block'>Do You Suspect a lot of Packetloss When Transmitting Data to Another Site? </button></a>
+   <br> </br>
+   <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/35976890-d8ca-11ea-9344-2da4788d78a4?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1d,to:now))&_a=(description:'This%20dashboard%20allows%20for%20the%20user%20to%20select%20both%20the%20source%20host,%20as%20well%20as%20any%20destination%20it%20may%20apply%20to,%20so%20to%20give%20all%20of%20the%20relevant%20information%20about%20the%20given%20parameters.%20This%20dashboard%20primarily%20focuses%20on%20the%20trace.',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:'(src_host:<?php echo $savedcookie; ?>%20AND%20dest_host:*)%20OR%20(src_host:*%20AND%20dest_host:<?php echo $savedcookie; ?>)'),timeRestore:!f,title:'Site-Based%20perfsonar%20Trace%20Breakdown%20ts-ih',viewMode:view) target='_blank'><button class='block'>Are You Interested in the Path that Data Takes from your Site to Another?</button></a>
+   <br> </br>
+  </div>
+  <div class='column'>
+   <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/a1ce0000-d8d4-11ea-9344-2da4788d78a4?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1d,to:now))&_a=(description:'This%20dashboard%20allows%20for%20the%20user%20to%20select%20both%20the%20source%20host,%20as%20well%20as%20any%20destination%20it%20may%20apply%20to,%20so%20to%20give%20all%20of%20the%20relevant%20information%20about%20the%20given%20parameters.%20This%20dashboard%20primarily%20focuses%20on%20the%20One-Way%20Delay.',filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,index:b1029d00-e61d-11ea-9ef7-e1db34380ad3,key:dest_site,negate:!t,params:(query:IEPSAS-Kosice),type:phrase),query:(match_phrase:(dest_site:IEPSAS-Kosice))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:b1029d00-e61d-11ea-9ef7-e1db34380ad3,key:src_site,negate:!t,params:(query:IEPSAS-Kosice),type:phrase),query:(match_phrase:(src_site:IEPSAS-Kosice)))),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:'(src_host:<?php echo $savedcookie; ?>%20AND%20dest_host:*)%20OR%20(src_host:*%20AND%20dest_host:<?php echo $savedcookie; ?>)'),timeRestore:!f,title:'Site-Based%20perfsonar%20One-Way%20Delay%20Breakdown%20ts-ih',viewMode:view) target='_blank'><button class='block'>Do you Suspect Slow Connections between your Site and Another?</button></a>
   </div>
  </div>
  </div>
@@ -403,6 +474,9 @@ $function() {
               document.getElementById("both").style.display="none";
               document.getElementById("latency").style.display="none";
               document.getElementById("throughput").style.display="none";
+              document.getElementById("cboth").style.display="none";
+              document.getElementById("clatency").style.display="none";
+              document.getElementById("cthroughput").style.display="none";
               document.getElementById("neither").style.display="none";
               document.getElementById("normhost").style.display="inline";
               document.getElementById("cookie").style.display="none";
@@ -410,8 +484,11 @@ $function() {
               if ( cookiestype === 'latency') {
                  document.getElementById("no-cust-text").style.display="none";
                  document.getElementById("both").style.display="none";
-                 document.getElementById("latency").style.display="inline";
+                 document.getElementById("latency").style.display="none";
                  document.getElementById("throughput").style.display="none";
+                 document.getElementById("cboth").style.display="none";
+                 document.getElementById("clatency").style.display="inline";
+                 document.getElementById("cthroughput").style.display="none";
                  document.getElementById("neither").style.display="none";
                  document.getElementById("normhost").style.display="none";
                  document.getElementById("cookie").style.display="inline";
@@ -419,15 +496,21 @@ $function() {
                  document.getElementById("no-cust-text").style.display="none";
                  document.getElementById("both").style.display="none";
                  document.getElementById("latency").style.display="none";
-                 document.getElementById("throughput").style.display="inline";
+                 document.getElementById("throughput").style.display="none";
+                 document.getElementById("cboth").style.display="none";
+                 document.getElementById("clatency").style.display="none";
+                 document.getElementById("cthroughput").style.display="inline";
                  document.getElementById("neither").style.display="none";
                  document.getElementById("normhost").style.display="none";
                  document.getElementById("cookie").style.display="inline";
               } if ( cookiestype === 'both') {
                  document.getElementById("no-cust-text").style.display="none";
-                 document.getElementById("both").style.display="inline";
+                 document.getElementById("both").style.display="none";
                  document.getElementById("latency").style.display="none";
                  document.getElementById("throughput").style.display="none";
+                 document.getElementById("cboth").style.display="inline";
+                 document.getElementById("clatency").style.display="none";
+                 document.getElementById("cthroughput").style.display="none";
                  document.getElementById("neither").style.display="none";
                  document.getElementById("normhost").style.display="none";
                  document.getElementById("cookie").style.display="inline";
@@ -436,6 +519,9 @@ $function() {
                  document.getElementById("both").style.display="none";
                  document.getElementById("latency").style.display="none";
                  document.getElementById("throughput").style.display="none";
+                 document.getElementById("cboth").style.display="none";
+                 document.getElementById("clatency").style.display="none";
+                 document.getElementById("cthroughput").style.display="none";
                  document.getElementById("neither").style.display="inline";
                  document.getElementById("normhost").style.display="none";
                  document.getElementById("cookie").style.display="inline";
@@ -448,6 +534,9 @@ $function() {
               document.getElementById("no-cust-text").style.display="none";
               document.getElementById("latency").style.display="inline";
               document.getElementById("throughput").style.display="none";
+              document.getElementById("cboth").style.display="none";
+              document.getElementById("clatency").style.display="none";
+              document.getElementById("cthroughput").style.display="none";
               document.getElementById("neither").style.display="none";
               document.getElementById("normhost").style.display="inline";
               document.getElementById("cookie").style.display="none";
@@ -456,6 +545,9 @@ $function() {
               document.getElementById("no-cust-text").style.display="none";
               document.getElementById("latency").style.display="none";
               document.getElementById("throughput").style.display="inline";
+              document.getElementById("cboth").style.display="none";
+              document.getElementById("clatency").style.display="none";
+              document.getElementById("cthroughput").style.display="none";
               document.getElementById("neither").style.display="none";
               document.getElementById("normhost").style.display="inline";
               document.getElementById("cookie").style.display="none";
@@ -464,6 +556,9 @@ $function() {
               document.getElementById("no-cust-text").style.display="none";
               document.getElementById("latency").style.display="none";
               document.getElementById("throughput").style.display="none";
+              document.getElementById("cboth").style.display="none";
+              document.getElementById("clatency").style.display="none";
+              document.getElementById("cthroughput").style.display="none";
               document.getElementById("neither").style.display="inline";
               document.getElementById("normhost").style.display="inline";
               document.getElementById("cookie").style.display="none";
@@ -472,6 +567,9 @@ $function() {
               document.getElementById("no-cust-text").style.display="none";
               document.getElementById("latency").style.display="none";
               document.getElementById("throughput").style.display="none";
+              document.getElementById("cboth").style.display="none";
+              document.getElementById("clatency").style.display="none";
+              document.getElementById("cthroughput").style.display="none";
               document.getElementById("neither").style.display="none";
               document.getElementById("normhost").style.display="inline";
               document.getElementById("cookie").style.display="none";
