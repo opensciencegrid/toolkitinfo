@@ -162,7 +162,7 @@ $alphajson = json_encode($alpha);
 <div class="demo">
 <div class="control-group">
 	<label for="alpha-tools">Select a Host Based on Alphabetical Order:</label>
-	<select id="alpha-tools" placeholder="Search for a toolkit or data type..."></select>
+	<select id="alpha-tools" placeholder="Search for a toolkit or data type, or enter your own (typo sensitive)..."></select>
 </div>
 <script>
 // <select id="alpha-tools"></select>
@@ -214,7 +214,7 @@ $('#alpha-tools').selectize({
 <div class="demo2">
 <div class="control-group">
 	<label for="select-tools">Select a Host Based on Distance:</label>
-	<select id="select-tools" placeholder="Search for a toolkit or data type..."></select>
+	<select id="select-tools" placeholder="Search for a toolkit or data type, or enter your own (typo sensitive)..."></select>
 </div>
 <script>
 // <select id="select-tools"></select>
