@@ -22,23 +22,9 @@
 
   <meta name="theme-color" content="#fafafa">
 
-  <script import 'selectize/dist/js/standalone/selectize.min.js'; </script>
-  <style type="text/css">
-   .selectize-control .option .title {
-	display: block;
-   }
-   .selectize-control .option .url {
-	font-size: 12px;
-	display: block;
-	color: #a0a0a0;
-   }
-   .selectize-control .item a {
-	color: #006ef5;
-   }
-   .selectize-control .item.active a {
-	color: #303030;
-   }
-  </style>
+  <script src="js/jquery.min.js"></script>
+  <script src="dist/js/standalone/selectize.js"></script>
+  <script src="js/index.js"></script>
 </head>
 
 <body>
@@ -50,7 +36,6 @@
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
 
 
 
@@ -159,54 +144,124 @@
 
  <br> </br>
 
- <form action="<?php echo '/'. basename(getcwd()) .'/'. basename($_SERVER['PHP_SELF']); ?>" method="get" class='colform'>
- <label for="host" style="color:black; font-size:17px;">Select Host In Alphabetical Order: </label>
- <select id="host" name="host">
-  <option value = ''></option>
-   <?php
-    $alphahosts = $alpha;
-    $alphahosts = unique_multidim_array($alphahosts,'host_name');
-    foreach($alphahosts as $array) { ?>
-     <option value= "<?php echo $array['host_name']; ?>"><?php echo $array['host_name']; ?></option>
-   <?php
-    }?>
- </select>
- <input type="submit" value='Submit'>
- </form>
 
- <form action="<?php echo '/'. basename(getcwd()) .'/'. basename($_SERVER['PHP_SELF']); ?>" method="get" class='colform'>
- <label for="host" style="color:black; font-size:17px;">Select Host Based on Distance: </label>
- <select id="host" name="host">
-  <option value = ''></option>
-   <?php
-    $hosts = $distance_array;
-    $hosts = unique_multidim_array($hosts,'host_name');
-    foreach($hosts as $array) { ?>
-     <option value= "<?php echo $array['host_name']; ?>"><?php echo $array['host_name']; ?></option>
-   <?php
-    }?>
- </select>
- <input type="submit" value='Submit'>
- </form>
+<div>
+<?php
+$alpha = array_values($alpha);
+$phpjson = json_encode($distance_array);
+$alphajson = json_encode($alpha);
+?>
+<p id="array"></p>
+<script type="text/javascript">
+ var data = <?php echo $phpjson ?>;
+ var alpha = <?php echo $alphajson ?>;
+</script>
+</div>
 
-<!-- 
- <form action="/developertoolkitinfo/perfsonartoolkit.php" method="get" class='colform'>
- <label for="site" style="color:black; font-size:17px;">Select Site Based on Distance: </label>
- <select id="site" name="site" style='width:150px;'>
-  <option value = ''></option>
-   <?php
-    $site = $distance_array;
-    $site = unique_multidim_array($site,'site_name');
-    foreach($site as $array) { 
-     if (!empty($array['site_name'])) { ?>
-      <option value= "<?php echo $array['site_name']; ?>"><?php echo $array['site_name']; ?></option>
-   <?php
-     } 
-    }?>
- </select>
- <input type="submit" value='Submit'>
- </form>
--->
+<div id="wrapper">
+<div class="demo">
+<div class="control-group">
+	<label for="alpha-tools">Select a Host Based on Alphabetical Order:</label>
+	<select id="alpha-tools" placeholder="Search for a toolkit or data type..."></select>
+</div>
+<script>
+// <select id="alpha-tools"></select>
+$('#alpha-tools').selectize({
+	maxItems: null,
+	create: true,
+	labelField: "data_type",
+	valueField: "host_name",
+	searchField: ["host_name","data_type"],
+	options : alpha,
+ 	onChange: function(value) {
+		var url = new URL('http://toolkitinfo.opensciencegrid.org/developertoolkitinfo/perfsonartoolkit.php');
+		var search_params = url.searchParams;
+		search_params.set('host', value);
+		url.search = search_params.toString();
+		console.log(url.search)
+		var new_url = url.toString();
+		console.log(new_url);
+		document.location.replace(new_url);
+	},
+ 	render: {
+        	item: function(item, escape) {
+            		return '<div>' +
+                		(item.host_name ? '<span class="host_name">' + escape(item.host_name) + '</span>' : '') + '<br>' +
+                		(item.data_type ? '<span class="data_type">' + escape(item.data_type) + '</span>' : '') +
+            		'</div>';
+        	},
+        	option: function(item, escape) {
+            		return '<div>' +
+                		'<strong>' + escape(item.host_name) + ' - ' + '</strong>' +
+				escape(item.data_type) + 
+            		'</div>';
+        	}
+    	},
+	create: function(input) {
+		return {
+			distance: 0,
+			host_name: input,
+			data_type: 'both'
+		};
+	}
+});
+</script>
+</div>
+</div>
+
+
+<div id="wrapper">
+<div class="demo2">
+<div class="control-group">
+	<label for="select-tools">Select a Host Based on Distance:</label>
+	<select id="select-tools" placeholder="Search for a toolkit or data type..."></select>
+</div>
+<script>
+// <select id="select-tools"></select>
+$('#select-tools').selectize({
+	maxItems: null,
+	create: true,
+	labelField: "data_type",
+	valueField: "host_name",
+	searchField: ["host_name","data_type"],
+	options : data,
+ 	onChange: function(value) {
+		var url = new URL('http://toolkitinfo.opensciencegrid.org/developertoolkitinfo/perfsonartoolkit.php');
+		var search_params = url.searchParams;
+		search_params.set('host', value);
+		url.search = search_params.toString();
+		console.log(url.search)
+		var new_url = url.toString();
+		document.location.replace(new_url);
+	},
+	render: {
+        	item: function(item, escape) {
+            		return '<div>' +
+                		(item.host_name ? '<span class="host_name">' + escape(item.host_name) + '</span>' : '') + '<br>' +
+                		(item.data_type ? '<span class="data_type">' + escape(item.data_type) + '</span>' : '') +
+            		'</div>';
+        	},
+        	option: function(item, escape) {
+            		return '<div>' +
+                		'<strong>' + escape(item.host_name) + ' - ' + '</strong>' +
+				escape(item.data_type) + 
+            		'</div>';
+        	}
+    	},
+	create: function(input) {
+		return {
+			distance: 0,
+			host_name: input,
+			data_type: 'both'
+		};
+	}
+});
+</script>
+</div>
+</div>
+
+
+
 
 <?php
  $search = array_column($distance_array,'host_name');
@@ -241,53 +296,9 @@
  <article>
 
 
-<!--
-<div>
- <h1>Selectize.js</h1>
- <div class="demo">
-  <h2>Customizing Appearance</h2>
-  <p>Render items on your own &amp; apply unique CSS styles.</p>
-  <div class="control-group">
-   <label for="select-links">Links:</label>
-   <select id="select-links" placeholder="Pick some links..."></select>
-  </div>
-  <script>
-  // <select id="select-links"></select>
-  $('#select-links').selectize({
-   theme: 'links',
-   maxItems: null,
-   valueField: 'id',
-   searchField: 'title',
-   options: [
-     {id: 1, title: 'DIY', url: 'https://diy.org'},
-     {id: 2, title: 'Google', url: 'http://google.com'},
-     {id: 3, title: 'Yahoo', url: 'http://yahoo.com'},
-   ],
-   render: {
-    option: function(data, escape) {
-     return '<div class="option">' +
-      '<span class="title">' + escape(data.title) + '</span>' +
-      '<span class="url">' + escape(data.url) + '</span>' +
-     '</div>';
-    },
-    item: function(data, escape) {
-     return '<div class="item"><a href="' + escape(data.url) + '">' + escape(data.title) + '</a></div>';
-    }
-   },
-   create: function(input) {
-    return {
-     id: 0,
-     title: input,
-     url: '#'
-    };
-   }
-  });
-  </script>
-  <p>TODO: explain how to bind events.</p>
- </div>
-</div>
 
--->
+
+
 
  <div id='both'>
  <h4> You have selected a toolkit host. If any of these issues are prevalent to your problem, please select them and your toolkit host will be both a source and destination </h4>
@@ -427,43 +438,6 @@
   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
 
-<!-- We want a function that will change visibility of page items based on if we have x.509 credentials or not -->
-<script>
-   <!-- Implement visibility of elements based upon x.509 presence -->
-     if (location.protocol !== 'https:' ) {
-       <!-- This is the case if we DO NOT have x.509 credentials -->
-       document.getElementById("ifr-psetf").style.display="none";
-       document.getElementById("Alarms").style.display="none";
-       document.getElementById("ifr-nox509").style.display="inline";
-       <!-- document.getElementById("pS-collector").style.visibility="hidden"; -->
-       document.getElementById("Ingest").style.visibility="visible";
-       document.getElementById("ITB-mon").style.visibility="hidden";
-       document.getElementById("Prod-mon").style.visibility="hidden";
-       document.getElementById("PL-alarm").style.visibility="visible";
-       document.getElementById("PL-overview").style.visibility="visible";
-       document.getElementById("PL-topN").style.visibility="visible";
-       document.getElementById("OSG-net-docs").style.visibility="visible";
-       document.getElementById("pS-docs").style.visibility="visible";
-       document.getElementById("ES-Fasterdata").style.visibility="visible";
-       document.getElementById("ES-trouble").style.visibility="visible";
-       document.getElementById("MaDDash").style.visibility="visible";
-       document.getElementById("pSConfig").style.visibility="visible";
-       document.getElementById("psetf").style.visibility="hidden";
-       document.getElementById("WLCG-grafana").style.visibility="visible";
-       document.getElementById("OSG-ELK-Analytics").style.visibility="visible";
-       document.getElementById("pS-infrastructure").style.visibility="visible";
-       document.getElementById("pS-Overview-PL").style.visibility="visible";
-       document.getElementById("SAND").style.visibility="visible";
-       document.getElementById("MEPHI-tr").style.visibility="visible";
-       document.getElementById("cl-avail").style.visibility="hidden";
-       document.getElementById("cl-checkmk").style.visibility="hidden";
-     } else {
-       <!-- This is the case if we DO have x.509 credentials -->
-       document.getElementById("ifr-psetf").style.display="inline";
-       document.getElementById("ifr-nox509").style.display="none";
-       <!-- document.getElementById("pS-collector").style.visibility="visible"; -->
-     }
-</script>
 <script>
 	var host = "<?php echo htmlspecialchars($_GET[host]); ?>";
         var cookies = "<?php echo $savedcookie; ?>";

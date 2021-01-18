@@ -526,11 +526,16 @@ div.form
 
 .demo {
 	border-bottom: 1px solid #e8e8e8;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	width: 40%;
+	padding-bottom: 185px;
+	padding-left: 80px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+	display: inline-block;
+    	flex-wrap: wrap;
+    	justify-content: space-between;
+    	float: left;
 }
 .demo:last-child {
 	border-bottom: 0 none;
@@ -551,6 +556,40 @@ div.form
 .demo .value span {
 	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
+
+.demo2 {
+	border-bottom: 1px solid #e8e8e8;
+	padding-bottom: 185px;
+	padding-right: 100px;
+	width:40%;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+    	flex-wrap: wrap;
+    	justify-content: space-between;
+    	float: right;
+}
+.demo2:last-child {
+	border-bottom: 0 none;
+}
+.demo2 select, .demo2 input, .demo2 .selectize-control {
+	width: 100%;
+}
+.demo2 > *:first-child {
+	margin-top: 0;
+}
+.demo2 > *:last-child {
+	margin-bottom: 0;
+}
+.demo2 .value {
+	margin: 0 0 10px 0;
+	font-size: 12px;
+}
+.demo2 .value span {
+	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+
+
 .theme-selector {
 	margin-top: 10px;
 	font-size: 13px;
