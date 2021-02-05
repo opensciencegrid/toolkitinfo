@@ -121,7 +121,7 @@
    $sorting = array_column($distance_array,'distance');
    array_multisort($sorting, SORT_ASC, $distance_array);
   ?>
- <?div>
+ </div>
  <div>
   <?php
    function alphasort($x,$y) {
@@ -142,8 +142,6 @@
     <a href="perfsonartoolkit.php"><button class="dropbtn">Toolkit Specific Page</button></a>
   </div>
 
- <br> </br>
-
 
 <div>
 <?php
@@ -161,7 +159,7 @@ $alphajson = json_encode($alpha);
 <div id="wrapper">
 <div class="demo">
 <div class="control-group">
-	<label for="alpha-tools">Select a Host Based on Alphabetical Order:</label>
+	<label for="alpha-tools">Select a Host Based on Alphabetical Order: </label>
 	<select id="alpha-tools" placeholder="Search for a toolkit or data type, or enter your own (typo sensitive)..."></select>
 </div>
 <script>
@@ -207,11 +205,9 @@ $('#alpha-tools').selectize({
 });
 </script>
 </div>
-</div>
 
 
-<div id="wrapper">
-<div class="demo2">
+<div class="demo">
 <div class="control-group">
 	<label for="select-tools">Select a Host Based on Distance:</label>
 	<select id="select-tools" placeholder="Search for a toolkit or data type, or enter your own (typo sensitive)..."></select>
@@ -260,7 +256,7 @@ $('#select-tools').selectize({
 </div>
 </div>
 
-
+<br> </br>
 
 
 <?php
@@ -271,6 +267,14 @@ $('#select-tools').selectize({
   return $key;
  }
  $typekey = searchingfunc($samplehost,$search);
+ if(isset($samplehost) and empty($typekey)) {
+  if($samplehost != $distance_array[0]['host_name']) {
+   $typekey = count($distance_array);
+   $distance_array[$typekey]['host_name'] = $samplehost;
+   $distance_array[$typekey]['data_type'] = 'both';
+   $distance_array[$typekey]['distance'] = 1;
+  }
+ }
 ?>
 
 <?php
@@ -278,6 +282,14 @@ $('#select-tools').selectize({
   $savedcookie = $_COOKIE["host"];
  }
  $cookietype = searchingfunc($savedcookie,$search);
+ if(isset($savedcookie) and empty($cookietype)) {
+  if($savedcookie != $distance_array[0]['host_name']) {
+   $cookietype = count($distance_array);
+   $distance_array[$cookietype]['host_name'] = $savedcookie;
+   $distance_array[$cookietype]['data_type'] = 'both';
+   $distance_array[$cookietype]['distance'] = 1;
+  }
+ }
 ?>
 
 
@@ -294,9 +306,6 @@ $('#select-tools').selectize({
 
 </nav>
  <article>
-
-
-
 
 
 
