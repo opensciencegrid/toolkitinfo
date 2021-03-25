@@ -307,6 +307,15 @@ $('#select-tools').selectize({
 </nav>
  <article>
 
+ <div id='all'>
+ <h4> Links for all toolkits: </h4>
+  <div class='row'>
+   <div class='column'>
+    <a href=https://<?php echo htmlspecialchars($_GET[host]); ?>/toolkit target='_blank'><button class='block'>See All Information About <?php echo htmlspecialchars($_GET[host]) ?></button></a>
+    <br> </br> 
+   </div>
+  </div>
+ </div>
 
 
  <div id='both'>
@@ -453,6 +462,7 @@ $('#select-tools').selectize({
         var cookiestype = "<?php echo $distance_array[$cookietype]['data_type']; ?>";
 	if ( typeof host === 'undefined' || host === null || host == "") {
            if ( typeof cookies === 'undefined' || cookies === null || cookies == "") {
+              document.getElementById("all").style.display="none";
               document.getElementById("no-cust-text").style.display="inline";
               document.getElementById("both").style.display="none";
               document.getElementById("latency").style.display="none";
@@ -465,6 +475,7 @@ $('#select-tools').selectize({
               document.getElementById("cookie").style.display="none";
           } else {
               if ( cookiestype === 'latency') {
+                 document.getElementById("all").style.display="inline";
                  document.getElementById("no-cust-text").style.display="none";
                  document.getElementById("both").style.display="none";
                  document.getElementById("latency").style.display="none";
@@ -476,6 +487,7 @@ $('#select-tools').selectize({
                  document.getElementById("normhost").style.display="none";
                  document.getElementById("cookie").style.display="inline";
               } if ( cookiestype === 'throughput') {
+                 document.getElementById("all").style.display="inline";
                  document.getElementById("no-cust-text").style.display="none";
                  document.getElementById("both").style.display="none";
                  document.getElementById("latency").style.display="none";
@@ -487,6 +499,7 @@ $('#select-tools').selectize({
                  document.getElementById("normhost").style.display="none";
                  document.getElementById("cookie").style.display="inline";
               } if ( cookiestype === 'both') {
+                 document.getElementById("all").style.display="inline";
                  document.getElementById("no-cust-text").style.display="none";
                  document.getElementById("both").style.display="none";
                  document.getElementById("latency").style.display="none";
@@ -498,6 +511,7 @@ $('#select-tools').selectize({
                  document.getElementById("normhost").style.display="none";
                  document.getElementById("cookie").style.display="inline";
               } if ( cookiestype === 'neither') {
+                 document.getElementById("all").style.display="inline";
                  document.getElementById("no-cust-text").style.display="none";
                  document.getElementById("both").style.display="none";
                  document.getElementById("latency").style.display="none";
@@ -513,6 +527,7 @@ $('#select-tools').selectize({
 	} else {
            var data = "<?php echo $distance_array[$typekey]['data_type']; ?>";
            if ( data === 'latency') {
+              document.getElementById("all").style.display="inline";
               document.getElementById("both").style.display="none";
               document.getElementById("no-cust-text").style.display="none";
               document.getElementById("latency").style.display="inline";
@@ -524,6 +539,7 @@ $('#select-tools').selectize({
               document.getElementById("normhost").style.display="inline";
               document.getElementById("cookie").style.display="none";
            } if ( data === 'throughput') {
+              document.getElementById("all").style.display="inline";
               document.getElementById("both").style.display="none";
               document.getElementById("no-cust-text").style.display="none";
               document.getElementById("latency").style.display="none";
@@ -535,6 +551,7 @@ $('#select-tools').selectize({
               document.getElementById("normhost").style.display="inline";
               document.getElementById("cookie").style.display="none";
            } if ( data === 'neither') {
+              document.getElementById("all").style.display="inline";
               document.getElementById("both").style.display="none";
               document.getElementById("no-cust-text").style.display="none";
               document.getElementById("latency").style.display="none";
@@ -546,6 +563,7 @@ $('#select-tools').selectize({
               document.getElementById("normhost").style.display="inline";
               document.getElementById("cookie").style.display="none";
            } if ( data === 'both') {
+              document.getElementById("all").style.display="inline";
               document.getElementById("both").style.display="inline";
               document.getElementById("no-cust-text").style.display="none";
               document.getElementById("latency").style.display="none";
