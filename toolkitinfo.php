@@ -58,23 +58,18 @@
 
 </nav>
 <article>
-<h1> Please Select A Category Based on The Question You Have </h1>
-<div class="row">
-   <div class="column">
-      <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/00b1ce70-d589-11ea-9344-2da4788d78a4  target="_blank"><button class="block">Do You Suspect General Networking Problems with Your Site?</button></a>
-      <br> </br>
-      <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/82552400-d8cb-11ea-9344-2da4788d78a4 target="_blank"><button class="block">Do You Suspect a lot of Packetloss when Transmitting Data to Another Site?</button></a>
-      <br> </br>
-      <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/a1ce0000-d8d4-11ea-9344-2da4788d78a4  target="_blank"><button class="block">Do You Suspect Slow Connections between Your Site and Another?</button></a>
-   </div>     
-   <div class="column">
-      <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/2760eaa0-b9ba-11ea-a57f-cfdaa2417d86 target="_blank"><button class="block">Are you Interested in your Site's Overall Network Performance?</button></a>
-      <br> </br>
-      <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/35976890-d8ca-11ea-9344-2da4788d78a4 target="_blank"><button class="block">Are you Interested in the Path that Data Takes from your Site to Another?</button></a>
-      <br> </br>
-      <a href=https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/57e3c0b0-d7f3-11ea-9344-2da4788d78a4 target="_blank"><button class="block">Are you Seeing a lot of Throughput Issues or Retransmitted Data for your Site?</button></a>
-   </div>
+<h1> Documentation and Use of the perfSONAR Toolkit Information Page </h1>
+<h3> The perfSONAR Toolkit Information Page serves to be a web-base in which users are able to access multiple tools for various situtations all in one place.</h4>
+<br>
+<div class='row'>
+ <div class='column'>
+  <h4> *Toolkit Specific Page* </h4>
+  <h5> To use the toolkit specific page, for those who are interested in looking at one specific host, the user may search based upon alphabetical order or distance from the user.
+     Once a toolkit is selected, either from the premade lists or manually entered as a wildcard, links to Elasticsearch data will appear, tailored to the type of data the host works with.
+     Once on Kibana, the previously selected host will automatically be applied as a filter, showing data ONLY relevant to the specified host as both a source and destination. </h5>
+ </div>
 </div>
+
 
 </div>
 </article>
