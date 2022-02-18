@@ -54,25 +54,45 @@
     <a href="analyticsanddashboards.html"><button class="dropbtn">Analytics and Dashboards</button></a>
     <a href="perfsonartoolkit.php"><button class="dropbtn">Toolkit Specific Page</button></a>
   </div>
+
 </div>
+
 
 </nav>
 <article>
-<h1> Documentation and Use of the perfSONAR Toolkit Information Page </h1>
-<h3> The perfSONAR Toolkit Information Page serves to be a web-base in which users are able to access multiple tools for various situtations all in one place.</h4>
-<br>
-<div class='row'>
- <div class='column'>
-  <h4> *Toolkit Specific Page* </h4>
-  <h5> To use the toolkit specific page, for those who are interested in looking at one specific host, the user may search based upon alphabetical order or distance from the user.
-     Once a toolkit is selected, either from the premade lists or manually entered as a wildcard, links to Elasticsearch data will appear, tailored to the type of data the host works with.
-     Once on Kibana, the previously selected host will automatically be applied as a filter, showing data ONLY relevant to the specified host as both a source and destination. </h5>
+ <h1> Analytics and Dashboards </h1>
+ <div class="row">
+     <div class="column">
+        <h2> WLCG Grafana Network Dashboards </h2>
+        <i> This is the WLCG/OSG Grafana dashboards hosted at CERN </i>
+        <a href="http://monit-grafana-open.cern.ch/dashboard/db/home?orgId=16" target ="_blank">
+        <img src="img/wlcg_grafana_network_dashboards_image.png" width="450" height="300"></a>
+        <h2> OSG perfSONAR Infrastructure details on a Kibana Dashboard </h2>
+        <i> This is the OSG/WLCG perfSONAR Infrastructure dashboard </i>
+        <a href ="https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/bfd9ce90-4542-11e7-a5be-63230ea2b639?_g=(refreshInterval:(pause:!t,value:0),time:(from:now-30d,mode:quick,to:now))&_a=(description:'',filters:!(),fullScreenMode:!f,options:(darkTheme:!f,useMargins:!f),panels:!((embeddableConfig:(vis:(defaultColors:('0%20-%20100':'rgb(0,104,55)'),legendOpen:!f)),gridData:(h:13,i:'1',w:8,x:0,y:15),id:'853ff9d0-4542-11e7-a5be-63230ea2b639',panelIndex:'1',type:visualization,version:'6.3.0'),(embeddableConfig:(vis:(colors:('2':%23890F02,'3':%236D1F62),legendOpen:!t)),gridData:(h:15,i:'4',w:12,x:12,y:0),id:'24cfcba0-4544-11e7-a5be-63230ea2b639',panelIndex:'4',type:visualization,version:'6.3.0'),(gridData:(h:15,i:'5',w:12,x:24,y:0),id:'84c8dbc0-4547-11e7-a5be-63230ea2b639',panelIndex:'5',type:visualization,version:'6.3.0'),(embeddableConfig:(vis:(params:(sort:(columnIndex:0,direction:asc)))),gridData:(h:25,i:'9',w:44,x:0,y:73),id:e0c8d190-45d4-11e7-a5be-63230ea2b639,panelIndex:'9',type:visualization,version:'6.3.0'),(embeddableConfig:(spy:(mode:(fill:!f,name:!n)),vis:(colors:('Average%20ntp.offset':%2382B5D8,'NTP%20Offset':%23508642,'Offset%20(seconds)':%239AC48A),legendOpen:!t)),gridData:(h:25,i:'10',w:12,x:0,y:48),id:b6ac6a00-45d6-11e7-a5be-63230ea2b639,panelIndex:'10',type:visualization,version:'6.3.0'),(embeddableConfig:(spy:(mode:(fill:!f,name:!n)),vis:(colors:('Average%20ntp.offset':%2382B5D8,Delay:%23EA6460,Dispersion:%235195CE),legendOpen:!t)),gridData:(h:25,i:'11',w:12,x:12,y:48),id:eed87da0-45d7-11e7-a5be-63230ea2b639,panelIndex:'11',type:visualization,version:'6.3.0'),(gridData:(h:25,i:'12',w:20,x:24,y:48),id:b8fc9ec0-45da-11e7-a5be-63230ea2b639,panelIndex:'12',type:visualization,version:'6.3.0'),(embeddableConfig:(vis:(params:(sort:(columnIndex:10,direction:desc)))),gridData:(h:35,i:'13',w:44,x:0,y:98),id:a46c7530-45e8-11e7-a5be-63230ea2b639,panelIndex:'13',type:visualization,version:'6.3.0'),(gridData:(h:20,i:'14',w:21,x:0,y:28),id:d1d07770-4777-11e7-9ba5-cb02ba77fee8,panelIndex:'14',type:visualization,version:'6.3.0'),(gridData:(h:20,i:'15',w:23,x:21,y:28),id:'722239b0-4779-11e7-9ba5-cb02ba77fee8',panelIndex:'15',type:visualization,version:'6.3.0'),(gridData:(h:15,i:'16',w:12,x:0,y:0),id:'19a29970-2927-11e8-b846-6d32755e5603',panelIndex:'16',type:visualization,version:'6.3.0'),(gridData:(h:13,i:'17',w:13,x:8,y:15),id:'71c8fa60-2c2c-11e8-b846-6d32755e5603',panelIndex:'17',type:visualization,version:'6.3.0'),(embeddableConfig:(),gridData:(h:13,i:'18',w:15,x:21,y:15),id:'5b48a320-4509-11e9-9a8d-07fa5dee6891',panelIndex:'18',type:visualization,version:'6.5.0')),query:(language:lucene,query:'*'),timeRestore:!t,title:'perfSONAR%20Infrastructure',viewMode:view)" target="_blank">
+        <img src="img/OSG_perfSONAR_Infrastructure_details_on_a_Kibana_Dashboard_image.png" width="450" height="300"></a>
+        <h2> The SAND Project focused on networking analytics for OSG and WLCG </h2>
+        <i> This takes you to SAND project webpage </i>
+        <a href="https://sand-ci.org/" target="_blank">
+        <img src="img/sand_project_homepage_image.png" width="450" height="300"></a>
+     </div>
+     <div class="column">
+        <h2> OSG/SAND/WLCG ELK Network Dashboards </h2>
+        <i> This is the OSG/SAND/WLCG ELK network dashboards </i>
+        <a href="https://atlas-kibana.mwt2.org:5061/s/networking/app/kibana#/dashboards?notFound=dashboard&_g=()" target="_blank">
+        <img src="img/osg_sand_wlsg_elk_network_dashboards_image.png" width="450" height="300"></a>
+        <h2> OSG Overview of Packet Loss Kibana Dashboard </h2>
+        <i> The Overview of Packet Loss Kibana dashboard </i>
+        <a href="https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/dashboard/07a03a80-beda-11e9-96c8-d543436ab024?_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3Anow-7d%2Cto%3Anow))" target="_blank">
+        <img src="img/OSG_Overview_of_Packet_Loss_Kibana_Dashboard_image.png" width="450" height="300"></a>
+        <h2> The MEPHI Traceroute Visualizer using our OSG/WLCG traceroute measurements </h2>
+        <i> This takes you to our MEPHI collaborators traceroute visualization tool for OSG/WLCG perfSONAR traceroutes </i>
+        <a href="https://perfsonar.uc.ssl-hep.org/" target="_blank">
+        <img src="img/mephi_traceroute_visualizer_image.png" width="450" height="300"></a>
+    </div>
  </div>
-</div>
-
-
-</div>
 </article>
+
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;

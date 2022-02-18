@@ -164,8 +164,7 @@ nav {
 } */
 
 .navbar {
-  overflow: visible;
-  z-index: 999 !important;
+  overflow: hidden;
   background-color: #DBE2EF;
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 16px;
@@ -233,12 +232,6 @@ position: fixed;
   height: 20px;
   display: inline-block;
 }
-
-.back {
-	position: absolute !important;
-	z-index: -1;
-}
-
 
 
 /* added - these are not needed, but make it look nicer */
@@ -434,179 +427,222 @@ div.form
  
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-   @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+   These examples override the primary ('mobile first')m 
+{
+float:left;
+width:50%;
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+.central
+{
+left: 50%;
+position: fixed;
+}
+
+.dynamics {
+  white-space: nowrap;
+}
+
+.dynamics > div {
+  width: 300px;
+  background: black;
+  border: 3px solid white;
+  height: 20px;
+  display: inline-block;
+}
+
+
+/* added - these are not needed, but make it look nicer */
+.column img {
+  object-fit: cover; /* prevents image from stretching */
+  margin-top: 12px;
+}
+
+/*Dropdowns for Tabs with Links*/
+.dropdown {
+ padding: 0;
+ overflow: hidden;
+ text-align: center;
+}
+
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: 2px solid #112D4E;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: #3F72AF;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+
+.show {
+  display: block;
+}
+
+div.form
+{
+    display: block;
+    text-align: left;
+}
+
+.form {
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    float: left;
+    margin-left: 15px;
+    width: 85%;
+    padding: 10px 0;
+}
+
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted blue; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 240px;
+  background-color: grey;
+  color: #fff;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 6px;
+  top: -5px;
+  left: 105%;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+
+
+
+ /* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+ .hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+
+/*
+* Extends the .visuallyhidden class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+  overflow: auto;
 }
 
  
 /* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-   @media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster */
-        -webkit-box-shadow: none !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
-
-
-/*------------------------------------------
-  Tesing import of selectize.js
-  ------------------------------------------ */
-
-.demo {
-	border-bottom: 1px solid #e8e8e8;
-	width: 40%;
-	padding-bottom: 5px;
-	padding-top: 10px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	display: inline-block;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-}
-.demo:last-child {
-	border-bottom: 0 none;
-}
-.demo select, .demo input, .demo .selectize-control {
-	width: 100%;
-}
-.demo > *:first-child {
-	margin-top: 0;
-}
-.demo > *:last-child {
-	margin-bottom: 0;
-}
-.demo .value {
-	margin: 0 0 10px 0;
-	font-size: 12px;
-}
-.demo .value span {
-	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-}
-
-.demo2 {
-	border-bottom: 1px solid #e8e8e8;
-	padding-bottom: 85px;
-	padding-right: 100px;
-	width:40%;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	display: inline-block;
-    	flex-wrap: wrap;
-    	justify-content: space-between;
-    	float: right;
-}
-.demo2:last-child {
-	border-bottom: 0 none;
-}
-.demo2 select, .demo2 input, .demo2 .selectize-control {
-	width: 100%;
-}
-.demo2 > *:first-child {
-	margin-top: 0;
-}
-.demo2 > *:last-child {
-	margin-bottom: 0;
-}
-.demo2 .value {
-	margin: 0 0 10px 0;
-	font-size: 12px;
-}
-.demo2 .value span {
-	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-
-
-.theme-selector {
-	margin-top: 10px;
-	font-size: 13px;
-}
-.theme-selector:before {
-	content: 'Themes: ';
-}
-.theme-selector a {
-	margin: 0 5px;
-}
-.theme-selector a.active {
-	color: #202020;
-	font-weight: bold;
-}
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first')

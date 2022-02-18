@@ -1,0 +1,116 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="Provides customized and general URLs for specific OSG/WLCG Toolkits">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+
+
+<!-- Site navigation menu -->
+
+
+
+<title>OSG/WLCG perfSONAR Toolkit Info Page</title>
+<header>
+<a href="https://opensciencegrid.org/"><img style="float:left" src="img/osg_logo-600x380.png" alt="The OSG logo" width="150" height="95"></a>
+<a href="http://wlcg.web.cern.ch/"><img style="float:right" align="top" src="img/WLCG-blackback-Logo-590x480.jpg" alt="The WLCG logo" width="150" height="95"></a>
+<H2>The perfSONAR Toolkit Information Page</H2>
+</header>
+
+
+<nav>
+<div class="navbar">
+
+  <div class="dropdown">
+    <a href="index.html"><button class="dropbtn">Main Page</button></a>
+    <a href="documentation.html"><button class="dropbtn">Documentation</button></a>
+    <a href="osgnetworkpipelines.html"><button class="dropbtn">OSG Network Pipelines</button></a>
+    <a href="osgnetworkservices.html"><button class="dropbtn">OSG Network Services</button></a>
+    <a href="analyticsanddashboards.html"><button class="dropbtn">Analytics and Dashboards</button></a>
+    <a href="perfsonartoolkit.php"><button class="dropbtn">Toolkit Specific Page</button></a>
+  </div>
+
+</div>
+
+
+</nav>
+<article>
+ <h1> OSG Network Pipelines </h1>
+ <h4 style="background-color:#FFA07A"><i> Note, Orange Labels Require A SSL Certificate</i></h4>
+ <div class="row" id="Red-osgpipelines">
+     <div class="column">
+        <h2> perfSONAR Ingest Rate </h2>
+        <i> This is the Kibana interface to the University of Chicago ATLAS Analytics platform which hosts our network metrics (as well as lots of other analytics data) </i>
+        <a href="https://atlas-kibana.mwt2.org:5601/s/networking/app/kibana#/visualize/edit/58bf3e80-18d1-11e8-8f2f-ab6704660c79?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-7d,to:now))&_a=(filters:!(),linked:!f,query:(language:lucene,query:(match_all:())),uiState:(),vis:(aggs:!(),params:(expression:'.es(index%3D!'ps_owd!',%20q%3D!'*!').label(!'OWD!'),%0A.es(index%3D!'ps_throughput!',%20q%3D!'*!').label(!'throughput!').yaxis(2),%0A.es(index%3D!'ps_meta!',%20q%3D!'*!').label(!'metadata!').yaxis(2),%0A.es(index%3D!'ps_status!',%20q%3D!'*!').label(!'status!').yaxis(2),%0A.es(index%3D!'ps_trace!',%20q%3D!'*!').label(!'traceroute!'),%0A.es(index%3D!'ps_packetloss!',%20q%3D!'*!').label(!'packet%20loss!'),%0A.es(index%3D!'ps_retransmits!',%20q%3D!'*!').label(!'retransmits!').yaxis(2)',interval:auto,type:timelion),title:'PerfSONAR%20ingest',type:timelion))" target="_blank">
+        <img src="img/perfSONAR_Ingest_Rate_image.png" width="450" height="300"></a>
+        <h2 style="background-color:#FFA07A"> Status of Production Services </h2>
+        <i style="background-color:#FFA07A"> This is the OSG/WLCG perfSONAR Production service monitoring host, based upon the Experiments Testing Framework (ETF) and Check_MK </i>
+        <a href ="https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Faggr_group%3DOSG%2520Production%2520Network%2520Services%26view_name%3Daggr_group" target="_blank" style="background-color:#FFA07A">
+        <img src="img/status_production_services_image.png" width="450" height="300"></a>
+     </div>
+     <div class="column">
+        <h2 style="background-color:#FFA07A"> Status of ITB Services </h2>
+        <i style="background-color:#FFA07A"> This is the OSG/WLCG perfSONAR Infrastructure Test Bed (ITB) service monitoring host, based upon the Experiments Testing Framework (ETF) and Check_MK </i>
+        <a href="https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Faggr_group%3DOSG%2520Network%2520ITB%2520Servers%26view_name%3Daggr_group" target="_blank" style="background-color:#FFA07A">
+        <img src="img/status_itb_services_image.png" width="450" height="300"></a>
+    </div>
+ </div>
+
+</article>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-136181829-1', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+<script>
+	var toolkit = "<?php echo htmlspecialchars($_GET[toolkits]); ?>";
+	if ( typeof toolkit === 'undefined' || toolkit === null || toolkit == "") {
+           document.getElementById("no-cust-text").style.display="inline";
+           document.getElementById("custom-links").style.display="none";
+	} else {
+           document.getElementById("custom-links").style.display="inline";
+           document.getElementById("no-cust-text").style.display="none";
+	}
+ </script>
+  <footer>
+        <a href="https://sand-ci.org/"><img src="img/sand_logo.png" alt="The SAND Project logo" width="95" height="95"></a>
+        <a href="https://iris-hep.org/"><img src="img/Iris-hep-6-WHITE-complete.png" alt="The IRIS-HEP logo" width="200" height="80"></a>
+        <a href="https://www.nsf.gov/"><img src="img/nsf_round_logo.png" alt="The NSF logo" width="95" height="95"></a>
+  </footer>
+  <center>
+        <a style="padding: 10px 0px;" href="mailto:wlcg-perfsonar-support@cern.ch?subject=ToolkitInfoFeedback">Contact us about this webpage</a>
+  </center>
+
+
+</body>
+
+</html>
